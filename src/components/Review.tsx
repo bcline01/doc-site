@@ -1,45 +1,72 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Star from '../assets/stars.png';
 import '../styles/Review.css';
 import { reviews } from '../components/seedData';
-// import OwlCarousel from 'react-owl-carousel';
-// import 'owl.carousel/dist/assets/owl.carousel.css';
-// import 'owl.carousel/dist/assets/owl.theme.default.css';
+import OwlCarousel from 'react-owl-carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
 
-const getRandomReview = () => {
-  return reviews[Math.floor(Math.random() * reviews.length)];
+// Options for the OwlCarousel
+const options = {
+  items: 1,
+  loop: true,
+  margin: 10,
+  nav: false,
+  dots: true,
+  autoplay: false,
+  responsive: {
+    0: { items: 1 },
+    400: { items: 1 },
+    600: { items: 1 },
+    700: { items: 1 },
+    800: { items: 1 },
+    1000: { items: 1 }
+  }
 };
 
-
+const getRandomReviews = () => {
+  // Shuffle the reviews array and get the first 3
+  const shuffledReviews = [...reviews].sort(() => 0.5 - Math.random());
+  return shuffledReviews.slice(0, 3);
+};
 
 const Review: React.FC = () => {
-  const randomReview = getRandomReview(); // Get a random review on each render
+  const [randomReviews] = useState(getRandomReviews()); // Get 3 random reviews
 
   return (
     <section className="page-review">
-      {/* <OwlCarousel className="owl-theme" loop margin={10} nav dots> */}
-        {/* <div className="item"> */}
-          <div className="row">
-            <div className="col-lg-6 col-md-6 col-sm-12">
+      <OwlCarousel className="owl-theme" {...options}>
+        {randomReviews.map((review, index) => (
+          <div key={index} className="item">
+            <div className="review-content">
               <div className="img-section">
                 <img 
                   src={Star} 
                   alt="placeholder" 
                   className="img-fluid" 
-                  style={{ maxWidth: '70%', height: 'auto', maxHeight: '300px' }} 
+                  style={{ maxWidth: '70%', height: 'auto', maxHeight: '100px' }} 
                 />
               </div>
-            </div>
-            <div className="col-lg-6 col-md-6 col-sm-12 text-column">
-              <div style={{ fontSize: '25px', opacity: '0.7', marginTop: '5%', marginRight: '15%', fontFamily: 'Raleway' }}>
-                "{randomReview.review}"
-                <br />
-                <strong>- {randomReview.name}</strong>
+              <div className="text-column">
+                <div
+                  style={{
+                    fontSize: '25px',
+                    opacity: '0.7',
+                    marginTop: '2%',
+                    fontFamily: 'Raleway',
+                    marginBottom: '5%',
+                    maxWidth: '80%',
+                  }}
+                >
+                  "{review.review}"
+                  <br />
+                  <strong >- {review.name}</strong>
+                </div>
               </div>
             </div>
           </div>
-        {/* </div> */}
-      {/* </OwlCarousel> */}
+        ))}
+      </OwlCarousel>
     </section>
   );
 };

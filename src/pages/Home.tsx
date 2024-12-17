@@ -3,6 +3,8 @@ import Video from '../assets/video.mp4';
 import '../styles/Home.css';
 import Review from '../components/Review';
 import Logo from '../assets/logo.png';
+import Services from '../components/Services';
+import Appointment from '../components/Appointment';
 
 
 
@@ -19,6 +21,7 @@ const Home: React.FC = () => {
         <li><a href="#section1">Home</a></li>
         <li><a href="#section2">Review</a></li>
         <li><a href="#section3">Services</a></li>
+        <li><a href="#section4">Appointment</a></li>
       </ul>
     </nav>
 
@@ -35,6 +38,12 @@ const Home: React.FC = () => {
 
   <section id="section2" className="review-page">
     <Review />
+  </section>
+  <section id="section3">
+    <Services />
+  </section>
+  <section id="section4">
+    <Appointment />
   </section>
   </div>
   );

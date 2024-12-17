@@ -1,7 +1,7 @@
 export const reviews = [
     {
       id: 1,
-      name: "Jane Doe",
+      name: "Jack Johnson",
       review:
         "I had an amazing experience! The staff was professional and attentive. My back pain has significantly decreased after just a few sessions.",
     },
