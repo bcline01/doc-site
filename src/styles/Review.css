@@ -1,0 +1,20 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+
+.page-review {
+    border-bottom: 2px solid black;
+}
+
+.img-section {
+    opacity: 0.6;
+    height: 500px;
+    overflow-y: auto;
+    scroll-behavior:smooth; 
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    text-align: center;
+    margin-top: 7%;
+    max-width: 600px;
+}
+  
