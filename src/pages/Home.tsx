@@ -5,6 +5,7 @@ import Review from '../components/Review';
 import Logo from '../assets/logo.png';
 import Services from '../components/Services';
 import Appointment from '../components/Appointment';
+import Vision from '../components/Vision';
 
 
 
@@ -44,6 +45,9 @@ const Home: React.FC = () => {
   </section>
   <section id="section4">
     <Appointment />
+  </section>
+  <section id="section4">
+    <Vision />
   </section>
   </div>
   );
