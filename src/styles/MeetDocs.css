@@ -1,6 +1,48 @@
 .doc-page {
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    height: 600px;
-  }
+  position: relative;
+  text-align: center; /* Centers content inside the section */
+  padding-top: 2rem; /* Adds space above the text */
+  height: 800px; /* Set the height of the section */
+}
+
+.owl-carousel {
+  position: relative;
+  display: flex;
+  justify-content: center; /* Centers images horizontally */
+}
+
+  /* Style for the images inside the Owl Carousel */
+.owl-carousel .owl-item img {
+  width: 400px; /* Set the size of the image */
+  height: 400px; /* Make the height the same as width */
+  object-fit: cover; /* Ensure the image covers the area without distorting */
+  border-radius: 50%; /* Makes the image round */
+  margin: 0 auto; /* Center the image inside the carousel item */
+  display: block;
+  margin-bottom: 20%;
+  margin-top: 20%;
+}
+
+.owl-carousel .owl-item {
+  display: flex;
+  justify-content: center; /* Centers images inside the carousel */
+  align-items: center; /* Ensures the images are vertically centered */
+}
+
+.owl-carousel .owl-dots {
+  text-align: center;
+}
+
+.meet-doctors-text {
+  font-size: 60px; /* Adjust font size */
+  color: black; /* Ensure text is white */
+  position: absolute;
+  top: 0; /* Positions it at the top of the section */
+  left: 50%;
+  transform: translateX(-50%); /* Centers the text horizontally */
+  z-index: 10; /* Ensures the text is above the carousel */
+  padding: 0 10px; /* Prevents text from touching the edges */
+  font-family: 'Raleway', sans-serif; /* Use Raleway font */
+  letter-spacing: 2px; /* Add space between letters */
+  text-transform: uppercase; /* Make text uppercase */
+}

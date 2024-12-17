@@ -5,6 +5,8 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 import '../styles/MeetDocs.css';
 import Man1 from '../assets/man1.png';
 import Man2 from '../assets/man2.png';
+import Man3 from '../assets/man3.png';
+
 // Options for the OwlCarousel
 const options = {
     items: 1,
@@ -27,13 +29,13 @@ const MeetDocs: React.FC = () => {
     return (
        
         <section className="doc-page">
+            <div className='meet-doctors-text'> Meet Our Doctors</div>
             <OwlCarousel className="owl-theme" {...options}>
             <div>
                     <img 
                         src={Man1}
                         alt='Man 1'
                         className='img-fluid'
-                        style={{ maxWidth: '70%', height: 'auto', maxHeight: '100px' }} 
 
                     />
                 </div>
@@ -42,7 +44,14 @@ const MeetDocs: React.FC = () => {
                         src={Man2}
                         alt='Man 2'
                         className='img-fluid'
-                        style={{ maxWidth: '70%', height: 'auto', maxHeight: '100px' }} 
+
+                    />
+                </div>
+                <div>
+                    <img
+                        src={Man3}
+                        alt='Man 3'
+                        className='img-fluid'
 
                     />
                 </div>
