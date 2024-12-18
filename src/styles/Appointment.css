@@ -10,7 +10,7 @@
   .image {
     width: 100%;
     height: auto;
-    opacity: 0.8;
+    opacity: 0.6;
   }
   
   .overlay {
@@ -37,6 +37,7 @@
     letter-spacing: 2px;
     font-family: 'Raleway', sans-serif;
     color: rgb(54, 53, 53);
+    font-weight: 500;
   }
   
  .button {
@@ -48,6 +49,7 @@
     width: 300px;
     letter-spacing: 2px;
     font-size: 15px;
+    font-weight: 600;
  }
 
  .button:hover {

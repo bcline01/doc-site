@@ -9,6 +9,8 @@ import { MdLocationOn } from "react-icons/md";
 
 
 
+// AIzaSyAOWHZBwPq_u9263KQzV-W-MtfErUHZeeE
+
 const Footer: React.FC = () => {
 
     const handlePhoneClick = () => {
