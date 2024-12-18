@@ -26,7 +26,7 @@ const Vision: React.FC = () => {
             className="vision-image"
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 2, delay: 0.4 }}
+            transition={{ duration: 1, delay: 0.3 }}
 
           />
           <motion.img
@@ -35,7 +35,7 @@ const Vision: React.FC = () => {
             className="vision-image"
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 3, delay: 0.6 }}
+            transition={{ duration: 1, delay: 0.4 }}
           />
           <motion.img
             src={Golf}
@@ -43,7 +43,7 @@ const Vision: React.FC = () => {
             className="vision-image"
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 4, delay: 0.8 }}
+            transition={{ duration: 1, delay: 0.5 }}
           />
         </div>
         <div className="vision-text">
