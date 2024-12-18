@@ -1,0 +1,93 @@
+/* Footer Navigation Bar */
+.nav-bar-footer {
+    border-top: 1px solid #555;       /* Optional: Add a border to separate footer nav */
+    border-bottom: 1px solid #555;    /* Optional: Add a border to separate footer nav */
+  }
+  
+  .nav-items-footer {
+    display: flex;
+    flex-wrap: wrap;                  /* Allow wrapping for responsiveness */
+    justify-content: center;          /* Center the nav items */
+    list-style: none;                 /* Remove default list styling */
+    padding: 0;                       /* Remove default padding */
+  }
+  
+  .footer-nav-item {
+    margin: 0.5rem 1rem;              /* Spacing between nav items */
+  }
+  
+  .footer-nav-link {
+    color: #fff;                      /* White text color */
+    font-size: 16px;                  /* Adjust font size */
+    text-transform: uppercase;        /* Uppercase text */
+    text-decoration: none;            /* Remove underline */
+    transition: color 0.3s;           /* Smooth transition for hover effect */
+  }
+  
+  .footer-nav-link:hover {
+    color: #00bcd4;                   /* Highlight color on hover */
+  }
+  
+  /* Footer Section */
+  .footer {
+    background-color: #ECECEC;        /* Dark background color */
+    color: black;                      /* White text color */
+    text-align: center;               /* Center align text */
+    padding: 2rem 0;                  /* Vertical padding */
+    font-family: 'raleway', sans-serif; /* Adjust font family */
+    letter-spacing: 2px;
+    height: 450px;
+  }
+  
+  /* Footer headings */
+  .footer h5 {
+    font-size: 20px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+  
+  /* Footer links */
+  .footer a {
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #333; /* Adjust text color */
+    transition: color 0.3s ease;
+    position: relative; 
+  }
+
+  .footer a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px; /* Adjust the distance of the underline from the text */
+    left: 0;
+    width: 0;
+    height: 2px; /* Thickness of the underline */
+    background-color: darkgrey; /* Color of the underline */
+    transition: width 0.3s ease; /* Smooth transition effect */
+  }
+
+  .footer a:hover::after {
+  width: 100%; /* Full width underline on hover */
+}
+  
+  .footer a:hover {
+    color: darkgrey; /* Adjust text color on hover */
+}
+
+
+
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .nav-items-footer {
+      flex-direction: row;            /* Keep items in a row */
+      flex-wrap: wrap;                /* Allow wrapping */
+    }
+  
+    .footer-nav-item {
+      margin-bottom: 0.5rem;          /* Add spacing between items when wrapped */
+    }
+  }
+  

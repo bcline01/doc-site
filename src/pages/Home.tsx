@@ -7,6 +7,7 @@ import Services from '../components/Services';
 import Appointment from '../components/Appointment';
 import Vision from '../components/Vision';
 import MeetDocs from '../components/MeetDocs';
+import Footer from '../components/Footer';
 
 
 
@@ -24,6 +25,9 @@ const Home: React.FC = () => {
         <li><a href="#section2">Review</a></li>
         <li><a href="#section3">Services</a></li>
         <li><a href="#section4">Appointment</a></li>
+        <li><a href="#section5">Vision</a></li>
+        <li><a href="#section6">MeetDocs</a></li>
+        <li><a href="#section7">Contact us</a></li>
       </ul>
     </nav>
 
@@ -47,11 +51,14 @@ const Home: React.FC = () => {
   <section id="section4">
     <Appointment />
   </section>
-  <section id="section4">
+  <section id="section5">
     <Vision />
   </section>
-  <section id="section4">
+  <section id="section6">
     <MeetDocs />
+  </section>
+  <section id="section7">
+    <Footer />
   </section>
   </div>
   );
