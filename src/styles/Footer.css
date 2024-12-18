@@ -76,6 +76,16 @@
     color: darkgrey; /* Adjust text color on hover */
 }
 
+.contact-link {
+    color: #333;              /* Match the text color */
+    text-decoration: none;    /* Remove underline */
+    font-size: 1rem;
+  }
+  
+  .contact-link:hover {
+    text-decoration: underline; /* Add underline on hover */
+  }
+  
 
 
   

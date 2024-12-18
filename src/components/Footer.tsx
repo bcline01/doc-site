@@ -61,8 +61,19 @@ const Footer: React.FC = () => {
             <div className="col-md-4 mb-3 ">
               <h5 >Contact Us</h5>
               <div ><span style={{marginRight:'4px'}}><FaPhoneFlip /> </span> (352) 372-4110</div> 
-              <div ><span style={{marginRight:'4px'}}> <FaFax /> </span>(352) 373-0111</div>
-                <div > <span style={{marginRight:'4px'}}></span><MdOutlineMail /> info@chirosofgainesville.com </div>
+                        <div ><span style={{ marginRight: '4px' }}> <FaFax /> </span>(352) 373-0111</div>
+                        <div > <span
+                            style={{ marginRight: '4px', cursor: 'pointer' }}
+                            onClick={() => window.location.href = 'mailto:info@chirosofgainesville.com?subject=Inquiry&body=Hello, I would like to schedule an appointment for'}
+                        >
+                            <MdOutlineMail />
+                        </span>
+                            <a
+                                href="mailto:info@chirosofgainesville.com?subject=Inquiry&body=Hello, I would like to schedule an appointment for"
+                                className="contact-link"
+                            >
+                                info@chirosofgainesville.com
+                            </a></div>
                 <div > <span style={{marginRight:'4px'}}></span><MdLocationOn />  3703 SW 13th Street Gainesville, FL 32608</div>
             </div>
           </div>
