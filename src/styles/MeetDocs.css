@@ -38,6 +38,7 @@
   line-height: 1.6;
   color: #333;
   margin: 0;
+  font-family: 'raleway', sans-serif;
 }
 
 
@@ -61,7 +62,7 @@
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;      /* Wrap items if the screen is smaller */
-  gap: 3rem;            /* Space between images */
+  gap: 2rem;            /* Space between images */
 }
 
 /* Style for the images inside the image-pair */
