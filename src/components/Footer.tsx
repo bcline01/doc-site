@@ -10,6 +10,18 @@ import { MdLocationOn } from "react-icons/md";
 
 
 const Footer: React.FC = () => {
+
+    const handlePhoneClick = () => {
+        window.location.href = 'tel:+13523724110';
+      };
+
+      const googleMapsUrl = 'https://www.google.com/maps?q=Chiropractic+Associates+of+Gainesville';
+      
+      const handleAddressClick = () => {
+        window.open(googleMapsUrl, '_blank');
+      };
+
+
     return (
         <footer className="footer  py-4">
         <nav className="nav-bar-footer navbar navbar-expand justify-content-center mb-4">
@@ -57,12 +69,14 @@ const Footer: React.FC = () => {
               </p>
               <button className="btn " style={{backgroundColor:'#55739b', color:'white'}}>Request Appointment!</button>
             </div>
-      
-            <div className="col-md-4 mb-3 ">
-              <h5 >Contact Us</h5>
-              <div ><span style={{marginRight:'4px'}}><FaPhoneFlip /> </span> (352) 372-4110</div> 
-                        <div ><span style={{ marginRight: '4px' }}> <FaFax /> </span>(352) 373-0111</div>
-                        <div > <span
+
+                    <div className="col-md-4 mb-3 ">
+                        <h5 >Contact Us</h5>
+                        <div ><span style={{ marginRight: '4px', cursor: 'pointer' }} onClick={handlePhoneClick}><FaPhoneFlip /> </span> <a href="tel:+13523724110" className="contact-link">
+                            (352) 372-4110
+                        </a></div>
+                        <div><span style={{ marginRight: '4px' }}> <FaFax /> </span>(352) 373-0111</div>
+                        <div><span
                             style={{ marginRight: '4px', cursor: 'pointer' }}
                             onClick={() => window.location.href = 'mailto:info@chirosofgainesville.com?subject=Inquiry&body=Hello, I would like to schedule an appointment for'}
                         >
@@ -74,12 +88,26 @@ const Footer: React.FC = () => {
                             >
                                 info@chirosofgainesville.com
                             </a></div>
-                <div > <span style={{marginRight:'4px'}}></span><MdLocationOn />  3703 SW 13th Street Gainesville, FL 32608</div>
+                        <div><span
+                            style={{ marginRight: '4px', cursor: 'pointer' }}
+                            onClick={handleAddressClick}
+                        >
+                            <MdLocationOn />
+                        </span>
+                            <a
+                                href={googleMapsUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="contact-link"
+                            >
+                                3703 SW 13th Street Gainesville, FL 32608
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </footer>
-      
+        </footer>
+
     );
 };
 
