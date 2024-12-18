@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Star from '../assets/stars.png';
 import '../styles/Review.css';
-// import { reviews } from '../components/seedData';
+import { reviews } from '../components/seedData';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
-import axios from 'axios';
 
 // Options for the OwlCarousel
 const options = {
@@ -25,58 +24,23 @@ const options = {
   }
 };
 
+const getRandomReviews = () => {
+  // Shuffle the reviews array and get the first 3
+  const shuffledReviews = [...reviews].sort(() => 0.5 - Math.random());
+  return shuffledReviews.slice(0, 3);
+};
+
 
 const Review: React.FC = () => {
-  const [reviews, setReviews] = useState<any[]>([]);
-  const [error, setError] = useState<string>('');
+  const [randomReviews] = useState(getRandomReviews()); // Get 3 random reviews
 
-  useEffect(() => {
-    const fetchReviews = async () => {
-      try {
-        // Step 1: Get place_id using findplacefromtext API
-        const findPlaceResponse = await axios.get('https://maps.googleapis.com/maps/api/place/findplacefromtext/json', {
-          params: {
-            input: 'Chiropractic Associates of Gainesville', // Name of the place you're looking for
-            inputtype: 'textquery',
-            key: process.env.API_KEY, // Use environment variable for security
-          },
-        });
-
-        // Check if we got a valid response
-        const placeId = findPlaceResponse.data.candidates[0]?.place_id;
-        if (!placeId) {
-          setError('Place not found');
-          return;
-        }
-
-        // Step 2: Use place_id to fetch reviews using place/details API
-        const reviewsResponse = await axios.get('https://maps.googleapis.com/maps/api/place/details/json', {
-          params: {
-            place_id: placeId,
-            key: process.env.API_KEY, // Use the same API key
-          },
-        });
-
-        // Set reviews to the state
-        setReviews(reviewsResponse.data.result.reviews || []);
-      } catch (error) {
-        console.error('Error fetching reviews:', error);
-        setError('Failed to fetch reviews');
-      }
-    };
-
-    fetchReviews();
-  }, []);
 
 
   return (
     <section className="page-review">
 
 <OwlCarousel className="owl-theme" {...options}>
-  {error && <p>{error}</p>}
-  
-  {reviews.length > 0 ? (
-    reviews.map((review, index) => (
+{randomReviews.map((review, index) => (
       <div key={index} className="item">
         <div className="review-content">
           <div className="img-section">
@@ -98,17 +62,15 @@ const Review: React.FC = () => {
                 maxWidth: '80%',
               }}
             >
-              "{review.text}"
+              "{review.review}"
               <br />
-              <strong>- {review.author_name}</strong>
+              <strong>- {review.name}</strong>
             </div>
           </div>
         </div>
       </div>
-    ))
-  ) : (
-    <p>No reviews available</p>
-  )}
+    ))}
+  
 </OwlCarousel>
     </section>
   );
