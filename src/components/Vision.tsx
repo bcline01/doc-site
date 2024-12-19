@@ -33,6 +33,7 @@ const Vision: React.FC = () => {
             src={Hike}
             alt="hike"
             className="vision-image"
+            id='hike'
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1, delay: 0.4 }}
@@ -41,6 +42,7 @@ const Vision: React.FC = () => {
             src={Golf}
             alt="golf"
             className="vision-image"
+            id='golf'
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1, delay: 0.5 }}

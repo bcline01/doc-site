@@ -100,4 +100,11 @@
         font-size: 1rem;
     }
 }
-
+ @media (max-width: 480px) {
+  #hike {
+    display: none;
+  }
+  #golf {
+    display: none;
+  }
+ }
