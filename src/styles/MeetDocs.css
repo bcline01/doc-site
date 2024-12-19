@@ -5,6 +5,7 @@
   height: 750px; /* Adjust the height as needed */
   overflow: hidden;
   background-color: #fff;
+  min-height: 100vh;
 }
 
 /* The blue line initially hidden off-screen to the left */
@@ -54,6 +55,7 @@
   display: flex;
   justify-content: center; /* Centers the image-pair horizontally */
   align-items: center; /* Vertically center content */
+  margin-bottom: 10%;
 }
 
 /* Style for the image pair container */
@@ -77,6 +79,11 @@
 /* Carousel dots */
 .doc-page .owl-carousel .owl-dots {
   text-align: center;
+  position: absolute; /* Position it properly */
+  bottom: 10px; /* Place it slightly above the bottom */
+  left: 50%;
+  transform: translateX(-50%); /* Center it horizontally */
+  z-index: 20; 
 }
 
 /* Style for the heading "Meet Our Doctors" */

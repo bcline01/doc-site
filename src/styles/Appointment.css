@@ -34,7 +34,7 @@
   background-color: white;
 opacity: 0.8;
 border-radius: 6px;
-padding: 10px;
+padding: 20px 5px 20px 5px;
 }
 
 .overlay h2 {
@@ -58,16 +58,18 @@ padding: 10px;
   background-color: white;
   color: black;
   padding: 10px 20px;
-  border-radius: 2px;
+  border-radius: 3px;
   font-family: "Raleway", sans-serif;
-  width: 300px;
+  width: 600px;
   letter-spacing: 2px;
-  font-size: 15px;
+  font-size: 25px;
   font-weight: 600;
 }
 
 .button:hover {
-  background-color: darkgrey;
+  background-color: rgb(61, 60, 60);
+  color: white;
+  
 }
 
 /* Media Query for Smaller Screens */

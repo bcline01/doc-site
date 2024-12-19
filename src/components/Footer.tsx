@@ -69,7 +69,7 @@ const Footer: React.FC = () => {
               <p>
                 We will do our best to accommodate your busy schedule. Request an appointment today!
               </p>
-              <button className="btn " style={{backgroundColor:'#55739b', color:'white'}}>Request Appointment!</button>
+              <button className="footer-btn" >Request Appointment!</button>
             </div>
 
                     <div className="col-md-4 mb-3 ">
