@@ -1,57 +1,88 @@
 .appointment {
-    position: relative;
-  }
-  
-  .image-container {
-    position: relative;
-    width: 100%;
-  }
-  
-  .image {
-    width: 100%;
-    height: auto;
-    opacity: 0.6;
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    font-family: Arial, sans-serif;
-  }
-  
-  .overlay h2 {
-    font-size: 60px;
-    margin-bottom: 10px;
-    font-family: 'Raleway', sans-serif;
-    color: rgb(54, 53, 53);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-  
-  .overlay p {
-    font-size: 30px;
-    letter-spacing: 2px;
-    font-family: 'Raleway', sans-serif;
-    color: rgb(54, 53, 53);
-    font-weight: 500;
-  }
-  
- .button {
-    background-color: white;
-    color: black;
-    padding: 10px 20px;
-    border-radius: 2px;
-    font-family: "Raleway", sans-serif;
-    width: 300px;
-    letter-spacing: 2px;
-    font-size: 15px;
-    font-weight: 600;
- }
+  position: relative;
+  min-height: 100vh; /* Ensures section takes full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
 
- .button:hover {
-    background-color: darkgrey;
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%; /* Make the image container fill the full section height */
+}
+
+.image {
+  width: 100%;
+  height: 100%; /* Ensure the image covers the container fully */
+  object-fit: cover; /* Keeps the image aspect ratio while covering the container */
+  opacity: 0.6;
+  min-height: 100vh;
+}
+
+.overlay {
+  position: absolute;
+  top: 25%; /* Center the overlay vertically */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-family: Arial, sans-serif;
+  width: 90%; /* Ensure overlay content doesn't stretch too wide */
+  background-color: white;
+opacity: 0.7;
+border-radius: 6px;
+padding: 10px;
+}
+
+.overlay h2 {
+  font-size: 4vw; /* Responsive font size */
+  margin-bottom: 10px;
+  font-family: 'Raleway', sans-serif;
+  color: rgb(54, 53, 53);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.overlay p {
+  font-size: 2.5vw; /* Responsive font size */
+  letter-spacing: 2px;
+  font-family: 'Raleway', sans-serif;
+  color: rgb(54, 53, 53);
+  font-weight: 500;
+}
+
+.button {
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 2px;
+  font-family: "Raleway", sans-serif;
+  width: 300px;
+  letter-spacing: 2px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.button:hover {
+  background-color: darkgrey;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  .overlay h2 {
+    font-size: 6vw; /* Larger font size for better readability on smaller screens */
   }
+
+  .overlay p {
+    font-size: 4vw;
+  }
+
+  .button {
+    width: 80%; /* Adjust button width to fit smaller screens */
+    max-width: 300px;
+    padding: 8px 15px;
+  }
+}
