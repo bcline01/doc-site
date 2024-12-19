@@ -32,7 +32,7 @@
   font-family: Arial, sans-serif;
   width: 90%; /* Ensure overlay content doesn't stretch too wide */
   background-color: white;
-opacity: 0.7;
+opacity: 0.8;
 border-radius: 6px;
 padding: 10px;
 }

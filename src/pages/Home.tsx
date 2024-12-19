@@ -37,9 +37,18 @@ const Home: React.FC = () => {
           Your browser does not support the video tag.
         </video>
         <div className="content">
-
-          <p className='welcome'>We Welcome New Patients!<button className='home-btn'>Request a New Appointment</button></p>
+          <div className='welcome'>
+            <div> We Welcome New Patients!</div>
+          <div className='home-btn-container'>
+          <button className='home-btn'>Request a New Appointment</button>
+          </div>
+          <div className='extra-buttons'>
+          <button className='extra-button'>Call Us</button>
+          <button className='extra-button'>Get Directions</button> 
+          </div>
+          </div>
         </div>
+       
       </section>
 
   <section id="section2" className="review-page">
