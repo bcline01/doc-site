@@ -52,16 +52,7 @@ const Review: React.FC = () => {
             />
           </div>
           <div className="text-column">
-            <div
-              style={{
-                fontSize: '25px',
-                opacity: '0.7',
-                marginTop: '2%',
-                fontFamily: 'Raleway',
-                marginBottom: '5%',
-                maxWidth: '80%',
-              }}
-            >
+            <div className='review-text'>
               "{review.review}"
               <br />
               <strong>- {review.name}</strong>

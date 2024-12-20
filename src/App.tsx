@@ -5,6 +5,7 @@ import './App.css'; // Your global styles
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App: React.FC = () => {
+
   useEffect(() => {
     // Use jQuery logic here if necessary
     $(document).ready(() => {
@@ -15,6 +16,9 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <Home />
+   
+        
+   
     </div>
   );
 };

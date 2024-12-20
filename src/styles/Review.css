@@ -28,9 +28,13 @@
     text-align: center;
   }
 
-  .page-review .text-column div {
-    font-size: 1.25rem;
-    color: #333;
+  .page-review .owl-carousel .item .text-column .review-text {
+    font-size: 1.5rem !important;
+    opacity: 0.7;
+    margin-top: 2%;
+    font-family: 'raleway', sans-serif;
+    margin-bottom: 5%;
+    max-width: 80%;
   }
   
   
