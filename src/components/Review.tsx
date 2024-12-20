@@ -48,7 +48,7 @@ const Review: React.FC = () => {
               src={Star}
               alt="Star"
               className="img-fluid"
-              style={{ maxWidth: '70%', height: 'auto', maxHeight: '100px' }}
+              style={{ maxWidth: '70%', height: 'auto', maxHeight: '100px', borderRadius: '6px' }}
             />
           </div>
           <div className="text-column">

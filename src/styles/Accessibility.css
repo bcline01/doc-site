@@ -126,6 +126,10 @@
   .high-contrast .accessibility-panel h3 {
     color: rgb(54, 54, 54);
   }
+
+  .page-review .owl-carousel .item .text-column .review-text {
+    color: white;
+  }
   
   /* Media queries for responsiveness */
   @media (max-width: 1024px) {

@@ -82,6 +82,7 @@
 
 .logo img {
   height: 70px; /* Adjust size of the logo */
+  border-radius: 6px;
 }
 
 .nav-items {
