@@ -84,10 +84,20 @@
     font-size: 1rem;
   }
   
-  .contact-link:hover {
-    text-decoration: underline; /* Add underline on hover */
+  /* .contact-link:hover {
+    text-decoration: underline; 
+  } */
+
+  .email-container {
+    /* display: flex;        */
+    align-items: center; 
+    gap: 8px;             /* Add space between icon and text */
+    flex-wrap: nowrap;    /* Prevent wrapping to a new line */
   }
   
+  .email-icon {
+    cursor: pointer;
+  }
 
 .footer-btn {
   background-color: #55739b;
@@ -116,6 +126,16 @@
   
     .footer-nav-item {
       margin-bottom: 0.5rem;          /* Add spacing between items when wrapped */
+    }
+    .footer a {
+      font-size: 1.2rem;                /* Adjust font size */
+    }
+  }
+  @media (min-width: 768px) {
+    .contact-link{
+      word-break: break-word;  
+      font-size: 1rem;
+
     }
   }
   

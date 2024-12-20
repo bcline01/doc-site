@@ -78,8 +78,8 @@ const Footer: React.FC = () => {
                             (352) 372-4110
                         </a></div>
                         <div><span style={{ marginRight: '4px', fontSize:'20px' }}> <FaFax /> </span>(352) 373-0111</div>
-                        <div><span
-                            style={{ marginRight: '4px', cursor: 'pointer' }}
+                        <div className='email-container'><span
+                            className='email-icon'
                             onClick={() => window.location.href = 'mailto:info@chirosofgainesville.com?subject=Inquiry&body=Hello, I would like to schedule an appointment for'}
                         >
                             <MdOutlineMail />

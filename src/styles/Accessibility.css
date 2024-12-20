@@ -65,13 +65,62 @@
   }
 
   .high-contrast {
-    background-color: black;
+    background-color: rgb(54, 54, 54);
     color: white;
   }
   
   .high-contrast button {
     background-color: #f1f1f1;
     color: black;
+  }
+
+  .high-contrast .nav-bar {
+    background-color: rgb(54, 54, 54);
+    
+  }
+  .high-contrast .nav-items a {
+    color: white;
+  }
+
+  .high-contrast .services-section {
+    background-color: rgb(54, 54, 54);
+    color: white;
+  }
+
+  .high-contrast .learn-more-btn {
+    background-color: rgb(54, 54, 54);
+    color: white;
+  }
+
+  .high-contrast #vision-contrast {
+    background-color: rgb(54, 54, 54);
+    color: white;
+  }
+
+  .high-contrast .vision-section p {
+    color: white;
+  }
+
+  .high-contrast .doc-page {
+    background-color: rgb(54, 54, 54);
+    color: white;
+  }
+
+  .high-contrast .doc-page .meet-doctors-text {
+    color: white;
+  }
+
+  .high-contrast .doc-text p {
+    color: white;
+  }
+
+  .high-contrast .footer {
+    background-color: rgb(54, 54, 54);
+    color: white;
+  }
+
+  .high-contrast .footer a {
+    color: white;
   }
   
   /* Media queries for responsiveness */

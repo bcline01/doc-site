@@ -16,7 +16,7 @@ const Vision: React.FC = () => {
 
   return (
    
-   <div style={{backgroundColor:'#ECECEC'}}>
+   <div id='vision-contrast' >
   <section className="vision" ref={visionRef}>
       <div className="vision-container">
         <div className="vision-images">
