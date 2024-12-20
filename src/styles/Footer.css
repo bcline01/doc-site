@@ -43,7 +43,7 @@
   
   /* Footer headings */
   .footer h5 {
-    font-size: 20px;
+    font-size: 28px;
     margin-bottom: 1rem;
     text-transform: uppercase;
   }
@@ -52,7 +52,7 @@
   .footer a {
     text-decoration: none;
     font-family: 'Raleway', sans-serif;
-    font-size: 1rem;
+    font-size: 20px;
     font-weight: 300;
     color: #333; /* Adjust text color */
     transition: color 0.3s ease;

@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
           <div className="row">
             <div className="col-md-4 mb-3">
               <h5>Office Hours</h5>
-              <p>
+              <p style={{fontSize:'20px'}}>
                 (SU) Closed <br />
                 (M) 8:00am-5:00pm<br />
                 (T) 7:15am-6:00pm<br />
@@ -66,7 +66,7 @@ const Footer: React.FC = () => {
       
             <div className="col-md-4 mb-3">
               <h5>Appointments</h5>
-              <p>
+              <p style={{fontSize:'20px'}}>
                 We will do our best to accommodate your busy schedule. Request an appointment today!
               </p>
               <button className="footer-btn" >Request Appointment!</button>
@@ -77,7 +77,7 @@ const Footer: React.FC = () => {
                         <div ><span style={{ marginRight: '4px', cursor: 'pointer' }} onClick={handlePhoneClick}><FaPhoneFlip /> </span> <a href="tel:+13523724110" className="contact-link">
                             (352) 372-4110
                         </a></div>
-                        <div><span style={{ marginRight: '4px' }}> <FaFax /> </span>(352) 373-0111</div>
+                        <div><span style={{ marginRight: '4px', fontSize:'20px' }}> <FaFax /> </span>(352) 373-0111</div>
                         <div><span
                             style={{ marginRight: '4px', cursor: 'pointer' }}
                             onClick={() => window.location.href = 'mailto:info@chirosofgainesville.com?subject=Inquiry&body=Hello, I would like to schedule an appointment for'}
