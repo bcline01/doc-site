@@ -1,0 +1,107 @@
+.accessibility-toolbar {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .accessibility-panel {
+    max-height: 0;
+    overflow: hidden;
+    transform: translateX(100%);  /* Start off the screen (to the right) */
+    opacity: 0;
+    transition: transform 0.4s ease, max-height 0.4s ease, opacity 0.4s ease;
+    background-color: #f1f1f1;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .accessibility-panel.active {
+    max-height: 300px;
+    transform: translateX(0);  /* Slide the panel in from the right */
+    opacity: 1;
+    max-width: 250px;
+    border-radius: 10px;
+    
+  }
+  
+  #accessibility-button {
+    background-color: #55739b;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    outline: none;
+  }
+
+  /* Make h3 and buttons responsive */
+.accessibility-panel h3 {
+    font-size: 1.25rem; 
+    transition: font-size 0.3s ease; /* Smooth transition for font resizing */
+  }
+  
+  .accessibility-panel button {
+    font-size: 1rem; /* Base font size for buttons */
+    transition: font-size 0.3s ease; /* Smooth transition for font resizing */
+    border: none;
+    outline: none;
+  }
+
+  .accessibility-panel button:hover {
+    color: rgb(40, 39, 39); 
+    font-weight: bold;
+  }
+
+  .accessibility-panel button:hover::after {
+    width: 100%;
+  }
+
+  .high-contrast {
+    background-color: black;
+    color: white;
+  }
+  
+  .high-contrast button {
+    background-color: #f1f1f1;
+    color: black;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 1024px) {
+    .accessibility-panel h3 {
+      font-size: 1.125rem; /* Slightly smaller font size on medium screens */
+    }
+  
+    .accessibility-panel button {
+      font-size: 0.75rem; /* Slightly smaller button font size on medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .accessibility-panel h3 {
+      font-size: 1rem; /* Smaller font size on tablets */
+    }
+  
+    .accessibility-panel button {
+      font-size: 0.6rem; /* Smaller button font size on tablets */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .accessibility-panel h3 {
+      font-size: 0.75rem; /* Even smaller font size on smaller screens */
+    }
+  
+    .accessibility-panel button {
+      font-size: 0.6rem; /* Even smaller button font size on smaller screens */
+    }
+  }
+  

@@ -15,3 +15,11 @@ html, body {
   position: relative;
  
 }
+
+:root {
+  --font-size: 1rem; /* Default font size */
+}
+
+body {
+  font-size: var(--font-size); /* Use the CSS variable */
+}

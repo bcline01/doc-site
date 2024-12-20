@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Video from '../assets/video.mp4';
 import '../styles/Home.css';
 import Review from '../components/Review';
@@ -9,10 +9,19 @@ import Vision from '../components/Vision';
 import MeetDocs from '../components/MeetDocs';
 import Footer from '../components/Footer';
 import SpinePic from '../assets/spineImg.png';
+import AccessibilityToolbar from '../components/AccessibilityToolbar';
+
 
 
 
 const Home: React.FC = () => {
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <div>
      <nav className="nav-bar">
@@ -21,16 +30,29 @@ const Home: React.FC = () => {
           <img src={Logo} alt="Logo" />
         </a>
       </div>
+      <nav className={`nav-menu ${menuOpen ? 'active' : ''}`}>
       <ul className="nav-items">
         <li><a href="#section1">Home</a></li>
-        <li><a href="#section2">Review</a></li>
+        <li><a href="#section2">Testimonials</a></li>
         <li><a href="#section3">Services</a></li>
-        <li><a href="#section4">Appointment</a></li>
-        <li><a href="#section5">Vision</a></li>
-        <li><a href="#section6">MeetDocs</a></li>
+        {/* <li><a href="#section4">Appointment</a></li>
+        <li><a href="#section5">Vision</a></li> */}
+        <li><a href="#section6">Meet Our Doctors</a></li>
         <li><a href="#section7">Contact us</a></li>
       </ul>
     </nav>
+
+    <button className="hamburger" onClick={toggleMenu} aria-label="Menu">
+        <span className="bar"></span>
+        <span className="bar"></span>
+        <span className="bar"></span>
+      </button>
+    </nav>
+
+     {/* Accessibility Toolbar */}
+     <div>
+     <AccessibilityToolbar />
+     </div>
 
       <section id="section1" className="home-page">
         <video autoPlay loop muted className="background-video">

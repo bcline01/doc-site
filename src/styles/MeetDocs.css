@@ -35,7 +35,7 @@
 }
 
 .doc-text p {
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.6;
   color: #333;
   margin: 0;
@@ -88,7 +88,7 @@
 
 /* Style for the heading "Meet Our Doctors" */
 .doc-page .meet-doctors-text {
-  font-size: 60px;               /* Adjust font size */
+  font-size: 3.75rem;               /* Adjust font size */
   color: black;                  /* Text color */
   position: relative;
   top: 0;                        /* Positions it at the top of the section */

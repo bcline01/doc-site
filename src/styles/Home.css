@@ -18,7 +18,7 @@
     position: relative;
     z-index: 1;
     color: black;
-    font-size: 80px;
+    font-size: 5rem;
     max-width: 70%;
    font-family: "Raleway", sans-serif;
    
@@ -28,10 +28,10 @@
     color: black;
     font-weight: 600px;
     background-color: white;
-    opacity: 0.4;
+    opacity: 0.5;
     border-radius: 6px;
     padding: 10px;
-    font-size: 80px;
+    font-size: 5rem;
   }
   
   .background-video {
@@ -46,8 +46,6 @@
     
   }
 
-
-
   .nav-bar {
     display: flex;
     position: fixed;
@@ -61,6 +59,25 @@
     width: 100%;
     z-index: 1000; /* Make sure it stays above other content */
   }
+
+  .hamburger {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+  
+  .hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+    /* transition: all 0.3s ease; */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+
+  }
   
 
 .logo img {
@@ -70,7 +87,7 @@
 .nav-items {
   list-style: none;
   display: flex;
-  gap: 2rem; /* Space between nav items */
+  gap: 2rem; 
   margin: 0;
   padding: 0;
   margin-right: 5%;
@@ -112,18 +129,30 @@
   color: darkgrey; 
 }
 
-  
+.hamburger.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0; /* Hide the middle bar */
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
   
   .home-btn {
-    font-size: 30px;
+    font-size: 2rem;
     font-family: "Raleway", sans-serif;
     border-radius: 6px;
-
+    background-color: #55739b;
+    color: white;
   }
 
 
   .home-btn:hover {
-    background-color: rgb(61, 60, 60);
+    background-color: rgb(31, 31, 31);
   color: white;
   }
 
@@ -134,6 +163,7 @@
 .small-picture {
   display: none;
 }
+
 
 
   @media (max-width: 480px) {
@@ -156,6 +186,7 @@
 
     .welcome {
       opacity: 0.6;
+      font-size: 11vw;
     }
 
     .extra-buttons {
@@ -173,10 +204,12 @@
       align-items: center;
       margin-bottom: 10px;
       border-radius: 6px;
+      background-color: #55739b;
+      color: white;
     }
 
     .extra-button:hover {
-      background-color: rgb(61, 60, 60);
+      background-color: rgb(31, 31, 31);
   color: white;
     }
     .home-btn {
@@ -184,22 +217,92 @@
       border-radius: 6px;
 
     }
+    
   }
 
   @media (max-width: 1500px) {
     .welcome {
-      font-size: 70px;
+      font-size: 4rem;
     }
   }
-
-  @media (max-width: 880px) {
+/* 880 */
+  @media (max-width: 768px) {
    .background-video {
      display: none;
    }  
+
+   .nav-items {
+    display: none;
+    flex-direction: column; /* Stack the items vertically */
+    background-color: #fff;
+    position: absolute;
+    top: 100%; /* Place below the navbar */
+    left: 0;
+    width: 100%;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    justify-content: center;
+    text-align: center; /* Center the text */
+    z-index: 9999; /* Ensure it's on top of other elements */
+  }
+
+  /* Style the navigation links */
+  .nav-items a {
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2rem; /* Adjust font size for mobile */
+    font-weight: 300;
+    color: #333; 
+    transition: color 0.3s ease;
+    padding: 10px 20px; /* Add some padding for better touch targets */
+  }
+
+  /* Underline effect */
+  .nav-items a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px; 
+    left: 0;
+    width: 0;
+    height: 2px; 
+    background-color: darkgrey; 
+    transition: width 0.3s ease;
+  }
+
+  /* Expand underline on hover */
+  .nav-items a:hover::after {
+    width: 100%; 
+  }
+
+  /* Show the navigation items when the nav-menu is active */
+  .nav-menu.active .nav-items {
+    display: flex;
+  }
+
+  /* Hamburger button */
+  .hamburger {
+    display: flex;
+    flex-direction: column; /* Stack the bars vertically */
+    justify-content: space-around;
+    align-items: center;
+    width: 30px; /* Set a size for the hamburger */
+    height: 30px; /* Adjust based on your design */
+    cursor: pointer; /* Add cursor pointer for clickability */
+  }
+
+  /* Hamburger bars */
+  .hamburger .bar {
+    width: 30px;
+    height: 4px;
+    background-color: #333;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+
   
     .welcome {
       opacity: 0.6;
-      font-size: 60px;
+      font-size: 11vw;
 
     }
     .extra-buttons {
@@ -210,22 +313,26 @@
       flex-direction: column;
       align-items: center;
       gap: 5px;
-      font-size: 25px;
+      font-size: 1.5rem;
     }
     .extra-button {
       width: 100%;
       border-radius: 6px;
+      background-color: #55739b;
+      color: white;
 
     }
     .extra-button:hover {
-      background-color: rgb(61, 60, 60);
+      background-color: rgb(31, 31, 31);
   color: white;
     }
     .home-btn {
-      font-size: 28px;
+      font-size: 1.75rem;
       margin-top: 10px;
       width: 100%;
       border-radius: 6px;
+      background-color: #55739b;
+      color: white;
 
     }
     .small-picture {
@@ -243,3 +350,6 @@
     }
   }
 
+  @media (max-width: 1200px) {
+ 
+  }
