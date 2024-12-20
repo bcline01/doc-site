@@ -8,6 +8,7 @@ import Appointment from '../components/Appointment';
 import Vision from '../components/Vision';
 import MeetDocs from '../components/MeetDocs';
 import Footer from '../components/Footer';
+import SpinePic from '../assets/spineImg.png';
 
 
 
@@ -36,6 +37,9 @@ const Home: React.FC = () => {
           <source src={Video} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
+        <div className='small-picture'>
+        <img src={SpinePic} alt="Spine" />
+        </div>
         <div className="content">
           <div className='welcome'>
             <div> We Welcome New Patients!</div>
