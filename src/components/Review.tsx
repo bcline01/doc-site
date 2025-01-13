@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import Star from '../assets/stars.png';
-import '../styles/Review.css';
-import { reviews } from '../components/seedData';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
+import Star from '../assets/stars.png';
+import '../styles/Review.css';
+import { reviews } from '../components/seedData';
+
 
 // Options for the OwlCarousel
 const options = {
