@@ -34,6 +34,7 @@ const getRandomReviews = () => {
 
 const Review: React.FC = () => {
   const [randomReviews] = useState(getRandomReviews()); // Get 3 random reviews
+  // console.log(randomReviews);
 
 
 
