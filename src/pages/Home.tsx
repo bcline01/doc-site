@@ -37,7 +37,7 @@ const Home: React.FC = () => {
         <li><a href="#section3">Services</a></li>
         {/* <li><a href="#section4">Appointment</a></li>
         <li><a href="#section5">Vision</a></li> */}
-        <li><a href="#section6">Meet Our Doctors</a></li>
+        <li><a href="#section6">Our Docs</a></li>
         <li><a href="#section7">Contact us</a></li>
       </ul>
     </nav>

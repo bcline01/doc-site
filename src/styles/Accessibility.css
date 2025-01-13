@@ -76,7 +76,7 @@
 
   .high-contrast .nav-bar {
     background-color: rgb(54, 54, 54);
-    
+    border-bottom: 1px solid white;
   }
   .high-contrast .nav-items a {
     color: white;
@@ -121,6 +121,10 @@
 
   .high-contrast .footer a {
     color: white;
+  }
+
+  .high-contrast .footer-btn:hover {
+    background-color: #55739b; 
   }
 
   .high-contrast .accessibility-panel h3 {

@@ -16,7 +16,7 @@ const AccessibilityToolbar: React.FC = () => {
     const [fontSizeH, setFontSizeH] = useState(2.3); // 
     const [fontSizeP, setFontSizeP] = useState(1.2); //
     const [fontSizeDoc, setFontSizeDoc] = useState(3.75); // Default font size of 1rem
-    const [fontSizeWelcome, setFontSizeWelcome] = useState(5); // Default font size of 1rem
+    // const [fontSizeWelcome, setFontSizeWelcome] = useState(5); 
     const setHighContrast = useState(false)[1]; // High contrast mode state
 
 
@@ -26,7 +26,7 @@ const AccessibilityToolbar: React.FC = () => {
       setFontSizeH((prev) => prev + 0.1);  // Increase specific font size
       setFontSizeP((prev) => prev + 0.1);  // Increase specific font size
       setFontSizeDoc((prev) => prev + 0.1);  // Increase specific font size
-      setFontSizeWelcome((prev) => prev + 0.1);  // Increase specific font size
+      // setFontSizeWelcome((prev) => prev + 0.1);  
     };
     
   
@@ -36,7 +36,7 @@ const AccessibilityToolbar: React.FC = () => {
       setFontSizeH((prev) => prev - 0.1);  // Increase specific font size
       setFontSizeP((prev) => prev - 0.1);  // Increase specific font size
       setFontSizeDoc((prev) => prev - 0.1);  // Increase specific font size
-      setFontSizeWelcome((prev) => prev - 0.1);  // Increase specific font size
+      // setFontSizeWelcome((prev) => prev - 0.1);  
     };
   
     // Function to reset font size to default
@@ -45,7 +45,7 @@ const AccessibilityToolbar: React.FC = () => {
       setFontSizeH(2.3); 
       setFontSizeP(1.2);
       setFontSizeDoc(3.75);
-      setFontSizeWelcome(5);
+      // setFontSizeWelcome(5);
       
       // Remove high contrast mode
       document.body.classList.remove('high-contrast');
@@ -94,13 +94,12 @@ const AccessibilityToolbar: React.FC = () => {
         (element as HTMLElement).style.fontSize = `${fontSizeDoc}rem`;  
       });
     }, [fontSizeDoc]); 
-    useEffect(() => {
-      // Apply font size dynamically to specific elements
-      const elements = document.querySelectorAll('.welcome');
-      elements.forEach((element) => {
-        (element as HTMLElement).style.fontSize = `${fontSizeWelcome}rem`;  
-      });
-    }, [fontSizeWelcome]); 
+    // useEffect(() => {
+    //   const elements = document.querySelectorAll('.welcome');
+    //   elements.forEach((element) => {
+    //     (element as HTMLElement).style.fontSize = `${fontSizeWelcome}rem`;  
+    //   });
+    // }, [fontSizeWelcome]); 
 
     
 
