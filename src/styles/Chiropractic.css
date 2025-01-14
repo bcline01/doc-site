@@ -3,7 +3,8 @@
     display: grid;
     gap: 2rem; /* Space between rows */
     padding: 1rem;
-    
+    padding-top: 80px;
+    min-height: auto;
   }
   
   /* Each row is a grid container */

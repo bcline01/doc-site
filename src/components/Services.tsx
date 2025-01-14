@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 import '../styles/Services.css';  
 import chiroImage from '../assets/chiro.png';
 import laserImage from '../assets/laser.png';
@@ -25,6 +25,8 @@ const Services: React.FC = () => {
       navigate(route);
     }
   };
+
+
 
   return (
     <section className="services-section">

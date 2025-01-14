@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Baby from '../assets/baby.png';
 import Pregnant from '../assets/pregnant.png';
 import Patient from '../assets/patient.png';
@@ -10,6 +10,7 @@ import Footer from '../components/Footer';
 
 
 const Chiropractic: React.FC = () => {
+
     const rows = [
         {
           image: Baby, 
@@ -24,10 +25,19 @@ const Chiropractic: React.FC = () => {
           text: 'Whether you are an athlete looking to improve performance, an elderly individual seeking relief from chronic aches, or an average adult with everyday stress, chiropractic care offers benefits for everyone. Regular adjustments can improve mobility, reduce pain, and enhance overall well-being by keeping your spine and nervous system functioning optimally. Athletes benefit from improved recovery and injury prevention, while seniors gain increased flexibility and reduced discomfort. For the average man or woman, chiropractic care addresses posture-related pain, tension headaches, and more, helping you feel your best every day. Chiropractic care is not just about fixing problems—it is about optimizing health and vitality at any age.',
         },
       ];
+
+      useEffect(() => {
+        // Scroll to the element with id 'top-of-page'
+        const topElement = document.getElementById('top-of-page');
+        if (topElement) {
+          topElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, []);
     
       return (
         <div>
         <div>
+        <div id="top-of-page"></div>
             <Navbar />
         </div>
         <div>

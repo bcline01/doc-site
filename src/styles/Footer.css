@@ -36,8 +36,8 @@
     padding: 2rem 0;                  /* Vertical padding */
     font-family: 'raleway', sans-serif; /* Adjust font family */
     letter-spacing: 2px;
-    height: 450px;
-    min-height: 100vh;
+    height: auto;
+    min-height: auto;
     margin-top: 10px;
   }
   
