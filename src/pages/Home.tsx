@@ -35,8 +35,8 @@ const Home: React.FC = () => {
         <li><a href="#section1">Home</a></li>
         <li><a href="#section2">Testimonials</a></li>
         <li><a href="#section3">Services</a></li>
-        {/* <li><a href="#section4">Appointment</a></li>
-        <li><a href="#section5">Vision</a></li> */}
+         <li><a href="#section4">Patient Portal</a></li>
+        {/* <li><a href="#section5">Vision</a></li>  */}
         <li><a href="#section6">Our Docs</a></li>
         <li><a href="#section7">Contact us</a></li>
       </ul>
@@ -64,7 +64,7 @@ const Home: React.FC = () => {
         </div>
         <div className="content">
           <div className='welcome'>
-            <div> We Welcome New Patients!</div>
+            <div> We Welcome New Patients</div>
           <div className='home-btn-container'>
           <button className='home-btn'>Request a New Appointment</button>
           </div>

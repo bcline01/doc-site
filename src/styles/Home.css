@@ -24,16 +24,7 @@
    
   }
 
-  .welcome {
-    color: black;
-    font-weight: 600px;
-    background-color: white;
-    opacity: 0.5;
-    border-radius: 6px;
-    padding: 10px;
-    font-size: 5rem;
-  }
-  
+
   .background-video {
     position: absolute;
     top: 50%;
@@ -102,7 +93,7 @@
 .nav-items a {
   text-decoration: none;
   font-family: 'Raleway', sans-serif;
-  font-size: 1rem;
+  /* font-size: 1rem; */
   font-weight: 300;
   color: #333; 
   transition: color 0.3s ease;
@@ -143,6 +134,16 @@
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
+.welcome {
+  color: black;
+  font-weight: 600px;
+  background-color: white;
+  opacity: 0.6;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 5rem;
+}
+
   
   .home-btn {
     font-size: 2rem;
@@ -150,6 +151,7 @@
     border-radius: 6px;
     background-color: #55739b;
     color: white;
+
   }
 
 
