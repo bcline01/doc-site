@@ -1,0 +1,45 @@
+/* Main container for the page */
+.responsive-container {
+    display: grid;
+    gap: 2rem; /* Space between rows */
+    padding: 1rem;
+    
+  }
+  
+  /* Each row is a grid container */
+  .responsive-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    align-items: center;
+    gap: 1rem; /* Space between columns */
+  }
+  
+  /* Styling for the image */
+  .responsive-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional for rounded corners */
+    object-fit: cover; /* Ensures proper aspect ratio */
+  }
+  
+  /* Styling for the text */
+  .responsive-text {
+    font-size: 1.2rem;
+    font-family: 'raleway', sans-serif;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    
+  }
+  
+  /* Responsive behavior for smaller screens */
+  @media (max-width: 768px) {
+    .responsive-row {
+      grid-template-columns: 1fr; /* Switch to a single column layout */
+      text-align: center; /* Center-align the text for better readability */
+    }
+  
+    .responsive-text {
+      margin-top: 1rem; /* Add space between image and text */
+    }
+  }
+  

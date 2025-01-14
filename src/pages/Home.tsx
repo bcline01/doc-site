@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Video from '../assets/video.mp4';
 import '../styles/Home.css';
 import Review from '../components/Review';
-import Logo from '../assets/logo.png';
+// import Logo from '../assets/logo.png';
 import Services from '../components/Services';
 import Appointment from '../components/Appointment';
 import Vision from '../components/Vision';
@@ -10,46 +10,23 @@ import MeetDocs from '../components/MeetDocs';
 import Footer from '../components/Footer';
 import SpinePic from '../assets/spineImg.png';
 import AccessibilityToolbar from '../components/AccessibilityToolbar';
+import Navbar from '../components/Navbar';
 
 
 
 
 const Home: React.FC = () => {
 
-  const [menuOpen, setMenuOpen] = useState(false);
+  // const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+  // const toggleMenu = () => {
+  //   setMenuOpen(!menuOpen);
+  // };
 
   return (
     <div>
-     <nav className="nav-bar">
-      <div className="logo">
-        <a href="#section1">
-          <img src={Logo} alt="Logo" />
-        </a>
-      </div>
-      <nav className={`nav-menu ${menuOpen ? 'active' : ''}`}>
-      <ul className="nav-items">
-        <li><a href="#section1">Home</a></li>
-        <li><a href="#section2">Testimonials</a></li>
-        <li><a href="#section3">Services</a></li>
-         <li><a href="#section4">Patient Portal</a></li>
-        {/* <li><a href="#section5">Vision</a></li>  */}
-        <li><a href="#section6">Our Docs</a></li>
-        <li><a href="#section7">Contact us</a></li>
-      </ul>
-    </nav>
+  <Navbar />
 
-    <button className="hamburger" onClick={toggleMenu} aria-label="Menu">
-        <span className="bar"></span>
-        <span className="bar"></span>
-        <span className="bar"></span>
-      </button>
-    </nav>
-
-     {/* Accessibility Toolbar */}
      <div>
      <AccessibilityToolbar />
      </div>
