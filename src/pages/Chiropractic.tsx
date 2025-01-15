@@ -7,24 +7,95 @@ import Navbar from '../components/Navbar';
 import '../styles/Accessibility.css';
 import AccessibilityToolbar from '../components/AccessibilityToolbar';
 import Footer from '../components/Footer';
+import Orthotic from '../assets/orthotics.png';
+import Exercise from '../assets/exercise-therapy.png';
+import Stemwave from '../assets/stemwave.png';
+import Functional from '../assets/functional-medicine.png';
+import Massage from '../assets/masssage.png';
+import Laser from '../assets/laser.png';
+import Decompression from '../assets/spinal.png';
+
 
 
 const Chiropractic: React.FC = () => {
-
-    const rows = [
-        {
-          image: Baby, 
-          text: 'Chiropractic care for babies focuses on gently addressing misalignments in their delicate spines that can occur during birth or early development. These adjustments can help alleviate common issues such as gas, colic, frequent spitting up, and difficulty breastfeeding. Proper spinal alignment can also promote restful sleep, essential for growth and development. Gentle and safe, chiropractic care supports your baby’s nervous system, helping them thrive physically and emotionally. If your baby is gassy, fussy, or struggling to settle at night, chiropractic care could provide the comfort and relief they need.',
-        },
-        {
-          image: Pregnant,
-          text: 'Pregnancy brings incredible changes to the body, and chiropractic care can provide much-needed relief during this transformative time. Specialized adjustments can alleviate back pain, reduce pressure on the hips, and ease discomfort caused by poor posture or a growing belly. Chiropractic care can also address common pregnancy issues like indigestion, headaches, and difficulty sleeping. By optimizing pelvic alignment, chiropractic adjustments can even support a smoother labor and delivery process. Gentle, safe, and tailored to your needs, chiropractic care helps you stay comfortable, energized, and ready for the journey of motherhood.',
-        },
-        {
-          image: Patient,
-          text: 'Whether you are an athlete looking to improve performance, an elderly individual seeking relief from chronic aches, or an average adult with everyday stress, chiropractic care offers benefits for everyone. Regular adjustments can improve mobility, reduce pain, and enhance overall well-being by keeping your spine and nervous system functioning optimally. Athletes benefit from improved recovery and injury prevention, while seniors gain increased flexibility and reduced discomfort. For the average man or woman, chiropractic care addresses posture-related pain, tension headaches, and more, helping you feel your best every day. Chiropractic care is not just about fixing problems—it is about optimizing health and vitality at any age.',
-        },
-      ];
+  const rows = [
+    {
+      image: Baby,
+      title: 'Chiropractic Care for Babies',
+      description: 'Chiropractic care for babies focuses on gently addressing misalignments in their delicate spines that can occur during birth or early development.',
+      points: [
+        <>
+          Helps alleviate common issues such as{' '}
+          <span className="italic">gas, colic, and frequent spitting up</span>.
+        </>,
+        'Promotes restful sleep, essential for growth and development.',
+        'Supports your baby’s nervous system for physical and emotional health.',
+      ],
+    },
+    {
+      image: Pregnant,
+      title: 'Chiropractic Care During Pregnancy',
+      description: 'Pregnancy brings incredible changes to the body, and chiropractic care can provide much-needed relief during this transformative time.',
+      points: [
+        'Alleviates back pain and reduces pressure on the hips.',
+        <>
+        Addresses issues like{' '}
+        <span className='italic'>indigestion, headaches, and difficulty sleeping.</span>
+        </>,
+        'Supports smoother labor and delivery through optimized pelvic alignment.',
+      ],
+    },
+    {
+      image: Patient,
+      title: 'Chiropractic Care for Everyone',
+      description: 'Whether you are an athlete, elderly, or an average adult, chiropractic care offers benefits for everyone.',
+      points: [
+        'Improves mobility and reduces pain.',
+        'Enhances recovery for athletes and flexibility for seniors.',
+        'Addresses posture-related pain and tension headaches.',
+        <>
+        Helps manage chronic conditions like{' '} 
+        <span className='italic'>arthritis and fibromyalgia.</span>
+        </>,
+        <>
+        Promotes healing after{' '}
+        <span className='italic'>car accidents</span> sports injuries, and other traumas.'
+        </>,
+      ],
+    },
+  ];
+  const therapies = [
+    {
+      name: 'Laser Therapy',
+      image: Laser,
+    },
+    {
+      name: 'Spinal Decompression',
+      image: Decompression,
+    },
+    {
+      name: 'Massage',
+      image: Massage,
+    },
+    {
+      name: 'Shockwave',
+      image: Stemwave,
+    },
+    {
+      name: 'Custom Orthotics',
+      image: Orthotic,
+    },
+    {
+      name: 'Exercise Therapy',
+      image: Exercise,
+    },
+    {
+      name: 'Functional Medicine',
+      image: Functional,
+    },
+  ];
+  
+  
 
       useEffect(() => {
         // Scroll to the element with id 'top-of-page'
@@ -43,20 +114,40 @@ const Chiropractic: React.FC = () => {
         <div>
             <AccessibilityToolbar />
         </div>
-
-        <div className="responsive-container">
-          {rows.map((row, index) => (
-            <div key={index} className="responsive-row">
-              <img src={row.image} alt={`Row ${index + 1}`} className="responsive-image" />
-              <div className="responsive-text">{row.text}</div>
-            </div>
+        <div className='responsive-container'>
+        <div className="chiropractic-main">
+    {rows.map((row, index) => (
+      <section key={index} className="chiropractic-row">
+        <img src={row.image} alt={row.title} className="responsive-image" />
+        <div className="text-content">
+          <h1>{row.title}</h1>
+          <p>{row.description}</p>
+          <ul>
+            {row.points.map((point, idx) => (
+              <li key={idx}>{point}</li>
+            ))}
+          </ul>
+        </div>
+      </section>
+    ))}
+  </div>
+     {/* New Therapies Section */}
+     <div className="therapies-container">
+        <div style={{fontFamily:'raleway', textTransform:'uppercase', fontSize:'3rem', letterSpacing:'2px', fontWeight:'none', marginBottom:'15px'}}>Our Therapies</div>
+        <div className="therapies-grid">
+          {therapies.map((therapy, idx) => (
+            <div key={idx} className="therapy-item">
+            <img src={therapy.image} alt={therapy.name} className="therapy-image" />
+            <h3>{therapy.name}</h3>
+          </div>
           ))}
         </div>
-        <div>
-            <Footer />
-        </div>
-        </div>
-        
-      );
-    };
+      </div>
+  </div>
+  <Footer />
+  </div>
+  );
+}
+
+  
 export default Chiropractic;

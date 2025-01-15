@@ -1,45 +1,190 @@
 /* Main container for the page */
 .responsive-container {
     display: grid;
-    gap: 2rem; /* Space between rows */
-    padding: 1rem;
+    gap: 1rem; /* Space between rows */
+    padding: .5rem;
     padding-top: 80px;
     min-height: auto;
+    background-color: white;
   }
   
   /* Each row is a grid container */
-  .responsive-row {
+  .chiropractic-row {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Two equal columns */
     align-items: center;
     gap: 1rem; /* Space between columns */
+    background-color: rgba(244, 239, 239, 0.955);
+
   }
   
   /* Styling for the image */
   .responsive-image {
     width: 100%;
+    max-width: 600px;
+    margin-bottom: 2%;
     height: auto;
     border-radius: 8px; /* Optional for rounded corners */
     object-fit: cover; /* Ensures proper aspect ratio */
+    margin-top: 10px;
   }
   
   /* Styling for the text */
-  .responsive-text {
+  .text-content {
     font-size: 1.2rem;
     font-family: 'raleway', sans-serif;
     line-height: 1.5;
     letter-spacing: 2px;
-    
+    text-align: left;
   }
+
+.text-content h1 {
+  font-size: 2.0rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.text-content p {
+  margin-bottom: 1rem;
+}
+
+.text-content ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.text-content li {
+  margin-bottom: 0.5rem;
+}
+.italic {
+  font-style: italic;
+  color: #085bc7; /* muted orange for softer emphasis */
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+.therapies-container {
+  padding: 40px 20px;
+  background-color: rgba(244, 239, 239, 0.955);
+    text-align: center;
+}
+
+.therapies-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.therapies-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 20px;
+}
+
+.therapy-item {
+  position: relative; /* Required for absolute positioning of the h3 */
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px; /* Fixed height for the box */
+  min-height: 250px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* .name {
+  display: none;
+} */
+
+.therapy-item h3 {
+  position: absolute; /* Positioned relative to the .therapy-item container */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the name inside the container */
+  font-size: 1.5rem;
+  font-family: 'raleway', sans-serif;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6); /* Background for visibility */
+  padding: 10px;
+  visibility: hidden; /* Initially hide the name */
+  opacity: 0; /* Make it invisible initially */
+  transition: visibility 0s, opacity 0.3s ease, z-index 0.3s ease;
+  z-index: -1; /* Ensure it's behind the image initially */
+}
+
+.therapy-item:hover {
+  background-color: rgba(0, 0, 0, 0.2); /* Darken the image container */
+}
+
+.therapy-item:hover img {
+  opacity: 0.3; /* Darken the image on hover */
+}
+
+.therapy-item:hover h3 {
+  visibility: visible; /* Show the therapy name */
+  opacity: 1; /* Make the therapy name visible */
+  z-index: 1; /* Bring the name to the front */
+  border-radius: 3px;
+ width: 100%;
+ height: auto;
+
+}
+
+.therapy-item p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.therapy-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.therapy-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image fully covers the container */
+  transition: opacity 0.3s ease;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 1200px) {
+  .therapies-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .therapies-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .therapies-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
   
   /* Responsive behavior for smaller screens */
   @media (max-width: 768px) {
-    .responsive-row {
+    .chiropractic-row {
       grid-template-columns: 1fr; /* Switch to a single column layout */
       text-align: center; /* Center-align the text for better readability */
     }
   
-    .responsive-text {
+    .text-content {
       margin-top: 1rem; /* Add space between image and text */
     }
   }
