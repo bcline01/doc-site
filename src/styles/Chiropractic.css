@@ -14,7 +14,7 @@
     grid-template-columns: 1fr 1fr; /* Two equal columns */
     align-items: center;
     gap: 1rem; /* Space between columns */
-    background-color: rgba(244, 239, 239, 0.955);
+    background-color: rgba(244, 243, 243, 0.955);
 
   }
   
@@ -64,8 +64,8 @@
 }
 .therapies-container {
   padding: 40px 20px;
-  background-color: rgba(244, 239, 239, 0.955);
-    text-align: center;
+  background-color: rgba(244, 243, 243, 0.955);
+  text-align: center;
 }
 
 .therapies-container h2 {
@@ -150,7 +150,40 @@
   transition: opacity 0.3s ease;
 }
 
+.first-visit-container {
+  display: flex;
+  justify-content: center;  /* Centers the content horizontally */
+  align-items: center;      /* Centers the content vertically (if needed) */
+  padding: 20px;
+  background-color: rgba(244, 243, 243, 0.955);
 
+}
+
+.first-visit-content {
+  text-align: center;       /* Centers the text inside */
+  width: 100%;              /* Ensures the content stretches to available width */
+  font-family: 'raleway', sans-serif;
+}
+
+.first-visit-content h1 {
+  margin-bottom: 20px;      /* Adds space between the h1 and the list */
+  font-family: 'raleway', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: none;
+  width: 100%;
+}
+
+.first-visit-content ul {
+  list-style-type: none;    /* Removes default list style */
+  padding: 0;               /* Removes any padding applied to the list */
+}
+
+.first-visit-content li {
+  font-size: 1.5rem;          /* Adjust size as needed */
+  margin-bottom: 10px;      /* Adds space between list items */
+  color: rgb(13, 1, 1);
+}
 
 
 

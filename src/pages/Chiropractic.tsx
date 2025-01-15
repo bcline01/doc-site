@@ -59,7 +59,7 @@ const Chiropractic: React.FC = () => {
         </>,
         <>
         Promotes healing after{' '}
-        <span className='italic'>car accidents</span> sports injuries, and other traumas.'
+        <span className='italic'>car accidents,</span> sports injuries, and other traumas.'
         </>,
       ],
     },
@@ -143,6 +143,17 @@ const Chiropractic: React.FC = () => {
           ))}
         </div>
       </div>
+    <div className='first-visit-container'>
+    <div className='first-visit-content'>
+    <div style={{fontFamily:'raleway', textTransform:'uppercase', fontSize:'3rem', letterSpacing:'2px', fontWeight:'none', marginBottom:'15px'}}>What to Expect on Your First Visit</div>
+    <ul>
+    <li>X-Ray or review of Imaging</li>
+    <li>Detailed Patient History</li>
+    <li>Full Physical Exam</li>
+    <li>Personalized Plan of Care</li>
+    </ul>
+  </div>
+  </div>
   </div>
   <Footer />
   </div>
