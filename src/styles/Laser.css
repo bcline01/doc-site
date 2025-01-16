@@ -1,0 +1,87 @@
+/* Laser.css */
+.laser-page {
+    display: grid;
+    gap: 1rem; /* Space between rows */
+    padding: .5rem;
+    padding-top: 80px;
+    min-height: auto;
+    background-color: white;
+}
+.laser-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    padding: 1rem;
+    height: 100vh;
+    background-color: rgba(244, 243, 243, 0.955)
+  }
+  
+  .laser-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+
+  }
+  
+  .laser-content {
+    font-size: 1.2rem;
+    font-family: 'raleway', sans-serif;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    text-align: left;
+  }
+  
+  .laser-content h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    /* letter-spacing: 1.5px; */
+  }
+  
+  .laser-content p {
+    /* font-size: 1.1rem;
+    line-height: 1.6; */
+    margin-bottom: 1rem;
+  }
+  
+  .laser-content ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    /* font-size: 1rem; */
+  }
+  
+  .laser-content ul li {
+    margin-bottom: 0.5rem;
+    /* line-height: 1.5; */
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fade-in {
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 2s ease-out forwards; /* 1s fade-in animation */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .laser-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .laser-content {
+      margin-top: 1.5rem;
+    }
+  }
+  

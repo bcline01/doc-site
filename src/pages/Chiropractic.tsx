@@ -7,17 +7,15 @@ import Navbar from '../components/Navbar';
 import '../styles/Accessibility.css';
 import AccessibilityToolbar from '../components/AccessibilityToolbar';
 import Footer from '../components/Footer';
-import Orthotic from '../assets/orthotics.png';
-import Exercise from '../assets/exercise-therapy.png';
-import Stemwave from '../assets/stemwave.png';
-import Functional from '../assets/functional-medicine.png';
-import Massage from '../assets/masssage.png';
-import Laser from '../assets/laser.png';
-import Decompression from '../assets/spinal.png';
+import FirstVisit from '../components/FirstVisit';
+import '../styles/FirstVisit.css';
+
 
 
 
 const Chiropractic: React.FC = () => {
+
+
   const [loaded, setLoaded] = useState(false);
   const rows = [
     {
@@ -66,49 +64,14 @@ const Chiropractic: React.FC = () => {
     },
 
   ];
-  const therapies = [
-    {
-      name: 'Laser Therapy',
-      image: Laser,
-    },
-    {
-      name: 'Spinal Decompression',
-      image: Decompression,
-    },
-    {
-      name: 'Massage',
-      image: Massage,
-    },
-    {
-      name: 'Shockwave',
-      image: Stemwave,
-    },
-    {
-      name: 'Custom Orthotics',
-      image: Orthotic,
-    },
-    {
-      name: 'Exercise Therapy',
-      image: Exercise,
-    },
-    {
-      name: 'Functional Medicine',
-      image: Functional,
-    },
-  ];
+ 
   
   useEffect(() => {
-    const timer = setTimeout(() => setLoaded(true), 100); // Add a slight delay to trigger animations
-    return () => clearTimeout(timer); // Cleanup timeout
+    const timer = setTimeout(() => setLoaded(true), 100); 
+    return () => clearTimeout(timer); 
   }, []);
 
-      useEffect(() => {
-        // Scroll to the element with id 'top-of-page'
-        const topElement = document.getElementById('top-of-page');
-        if (topElement) {
-          topElement.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, []);
+ 
     
       return (
         <div>
@@ -136,30 +99,10 @@ const Chiropractic: React.FC = () => {
       </section>
     ))}
   </div>
-     {/* New Therapies Section */}
-     <div className="therapies-container">
-        <div style={{fontFamily:'raleway', textTransform:'uppercase', fontSize:'3rem', letterSpacing:'2px', fontWeight:'none', marginBottom:'15px'}}>Our Therapies</div>
-        <div className="therapies-grid">
-          {therapies.map((therapy, idx) => (
-            <div key={idx} className="therapy-item">
-            <img src={therapy.image} alt={therapy.name} className="therapy-image" />
-            <h3>{therapy.name}</h3>
-          </div>
-          ))}
-        </div>
-      </div>
-    <div className='first-visit-container'>
-    <div className='first-visit-content'>
-    <div style={{fontFamily:'raleway', textTransform:'uppercase', fontSize:'3rem', letterSpacing:'2px', fontWeight:'none', marginBottom:'15px'}}>What to Expect on Your First Visit</div>
-    <ul>
-    <li>Detailed Patient History</li>
-    <li>Full Physical Exam</li>
-    <li>X-Ray or review of Imaging</li>
-    <li>Personalized Plan of Care</li>
-    <li>First Adjustment</li>
-    </ul>
-  </div>
-  </div>
+  
+  <FirstVisit />
+  
+
   </div>
   <Footer />
   </div>
