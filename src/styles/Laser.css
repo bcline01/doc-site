@@ -22,7 +22,7 @@
     height: auto;
     border-radius: 2px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 1200px;
+    max-width: 800px;
 
   }
   
@@ -35,7 +35,7 @@
   }
   
   .laser-content h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
     text-transform: uppercase;
     /* letter-spacing: 1.5px; */
@@ -78,8 +78,13 @@
   .laser-container {
     grid-template-columns: 1fr;
     gap: 1rem;
+    align-items: center;
   }
-
+ .laser-image img {
+  display: grid;
+  margin-bottom: 5%;
+  justify-self: center;
+ }
   }
   
   /* Responsive Styles */
