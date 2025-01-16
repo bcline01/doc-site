@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Baby from '../assets/baby.png';
 import Pregnant from '../assets/pregnant.png';
 import Patient from '../assets/patient.png';
@@ -18,7 +18,26 @@ import Decompression from '../assets/spinal.png';
 
 
 const Chiropractic: React.FC = () => {
+  const [loaded, setLoaded] = useState(false);
   const rows = [
+    {
+      image: Patient,
+      title: 'Chiropractic Care for Everyone',
+      description: 'Whether you are an athlete, elderly, or an average adult, chiropractic care offers benefits for everyone.',
+      points: [
+        'Improves mobility and reduces pain.',
+        'Enhances recovery for athletes and flexibility for seniors.',
+        'Addresses posture-related pain and tension headaches.',
+        <>
+        Helps manage chronic conditions like{' '} 
+        <span className='italic'>arthritis and fibromyalgia.</span>
+        </>,
+        <>
+        Promotes healing after{' '}
+        <span className='italic'>car accidents,</span> sports injuries, and other traumas.
+        </>,
+      ],
+    },
     {
       image: Baby,
       title: 'Chiropractic Care for Babies',
@@ -45,24 +64,7 @@ const Chiropractic: React.FC = () => {
         'Supports smoother labor and delivery through optimized pelvic alignment.',
       ],
     },
-    {
-      image: Patient,
-      title: 'Chiropractic Care for Everyone',
-      description: 'Whether you are an athlete, elderly, or an average adult, chiropractic care offers benefits for everyone.',
-      points: [
-        'Improves mobility and reduces pain.',
-        'Enhances recovery for athletes and flexibility for seniors.',
-        'Addresses posture-related pain and tension headaches.',
-        <>
-        Helps manage chronic conditions like{' '} 
-        <span className='italic'>arthritis and fibromyalgia.</span>
-        </>,
-        <>
-        Promotes healing after{' '}
-        <span className='italic'>car accidents,</span> sports injuries, and other traumas.'
-        </>,
-      ],
-    },
+
   ];
   const therapies = [
     {
@@ -95,7 +97,10 @@ const Chiropractic: React.FC = () => {
     },
   ];
   
-  
+  useEffect(() => {
+    const timer = setTimeout(() => setLoaded(true), 100); // Add a slight delay to trigger animations
+    return () => clearTimeout(timer); // Cleanup timeout
+  }, []);
 
       useEffect(() => {
         // Scroll to the element with id 'top-of-page'
@@ -118,8 +123,8 @@ const Chiropractic: React.FC = () => {
         <div className="chiropractic-main">
     {rows.map((row, index) => (
       <section key={index} className="chiropractic-row">
-        <img src={row.image} alt={row.title} className="responsive-image" />
-        <div className="text-content">
+        <img src={row.image} alt={row.title} className={`responsive-image ${loaded ? 'fade-in' : ''}`} />
+        <div className={`text-content ${loaded ? 'fade-in' : ''}`}>
           <h1>{row.title}</h1>
           <p>{row.description}</p>
           <ul>
@@ -147,10 +152,11 @@ const Chiropractic: React.FC = () => {
     <div className='first-visit-content'>
     <div style={{fontFamily:'raleway', textTransform:'uppercase', fontSize:'3rem', letterSpacing:'2px', fontWeight:'none', marginBottom:'15px'}}>What to Expect on Your First Visit</div>
     <ul>
-    <li>X-Ray or review of Imaging</li>
     <li>Detailed Patient History</li>
     <li>Full Physical Exam</li>
+    <li>X-Ray or review of Imaging</li>
     <li>Personalized Plan of Care</li>
+    <li>First Adjustment</li>
     </ul>
   </div>
   </div>

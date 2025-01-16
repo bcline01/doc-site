@@ -4,6 +4,7 @@ import { FaPhoneFlip } from "react-icons/fa6";
 import { FaFax } from "react-icons/fa";
 import { MdOutlineMail } from "react-icons/md";
 import { MdLocationOn } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 
 
@@ -25,16 +26,18 @@ const Footer: React.FC = () => {
 
 
     return (
-        <footer className="footer  py-4">
+      <footer className="footer  py-4">
         <nav className="nav-bar-footer navbar navbar-expand justify-content-center mb-4">
           <ul className="nav-items-footer navbar-nav">
+
             <li className="footer-nav-item mx-2">
-              <a className="footer-nav-link" href="#section1">Home</a>
+              <Link className="footer-nav-link" to="/">Home</Link>
             </li>
+
             <li className="footer-nav-item mx-2">
-              <a className="footer-nav-link" href="#section2">Reviews</a>
+              <Link className="footer-nav-link" to="/new-patient">New Patient</Link>
             </li>
-            <li className="footer-nav-item mx-2">
+            {/* <li className="footer-nav-item mx-2">
               <a className="footer-nav-link" href="#section3">Services</a>
             </li>
             <li className="footer-nav-item mx-2">
@@ -45,7 +48,7 @@ const Footer: React.FC = () => {
             </li>
             <li className="footer-nav-item mx-2">
               <a className="footer-nav-link" href="#section6">MeetDocs</a>
-            </li>
+            </li> */}
           </ul>
         </nav>
       

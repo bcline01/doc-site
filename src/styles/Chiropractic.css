@@ -27,6 +27,7 @@
     border-radius: 8px; /* Optional for rounded corners */
     object-fit: cover; /* Ensures proper aspect ratio */
     margin-top: 10px;
+    /* margin-left: 3%; */
   }
   
   /* Styling for the text */
@@ -46,6 +47,7 @@
 
 .text-content p {
   margin-bottom: 1rem;
+  
 }
 
 .text-content ul {
@@ -185,6 +187,23 @@
   color: rgb(13, 1, 1);
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0; /* Start hidden */
+  animation: fadeIn 2s ease-out forwards; /* 1s fade-in animation */
+}
+
+
 
 
 
@@ -193,6 +212,10 @@
 @media (max-width: 1200px) {
   .therapies-grid {
     grid-template-columns: repeat(5, 1fr);
+  }
+  .text-content {
+    font-size: 1rem;
+
   }
 }
 
@@ -219,6 +242,7 @@
   
     .text-content {
       margin-top: 1rem; /* Add space between image and text */
+
     }
   }
   

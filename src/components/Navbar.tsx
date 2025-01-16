@@ -79,7 +79,7 @@ const Navbar: React.FC = () => {
               <li><Link to="/patient-portal">Patient Portal</Link></li>
 
               {/* Book Appointment */}
-              <li><Link to="/book-appointment">Book Appointment</Link></li>
+              <li><Link to="/book-appointment">Request Appointment</Link></li>
             </>
           )}
         </ul>
