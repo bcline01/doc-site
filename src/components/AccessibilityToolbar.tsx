@@ -12,7 +12,7 @@ import { RiResetLeftLine } from "react-icons/ri";
 
 const AccessibilityToolbar: React.FC = () => {
     useAccessibility(); // Call the custom hook
-    const [fontSize, setFontSize] = useState(1.5); // Default font size of 1rem
+    const [fontSize, setFontSize] = useState(1.3); // Default font size of 1rem
     const [fontSizeH, setFontSizeH] = useState(2.3); // 
     const [fontSizeP, setFontSizeP] = useState(1.2); //
     const [fontSizeDoc, setFontSizeDoc] = useState(3.75); // Default font size of 1rem
@@ -41,7 +41,7 @@ const AccessibilityToolbar: React.FC = () => {
   
     // Function to reset font size to default
     const resetPage = () => {
-      setFontSize(1.5); 
+      setFontSize(1.3); 
       setFontSizeH(2.3); 
       setFontSizeP(1.2);
       setFontSizeDoc(3.75);

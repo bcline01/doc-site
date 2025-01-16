@@ -14,7 +14,8 @@ html, body {
 .home-page {
   min-height: 100vh; /* Ensure it's tall enough to allow scrolling */
   position: relative;
- 
+ z-index: -1000; 
+  background-color: rgba(244, 243, 243, 0.955);
 }
 
 :root {

@@ -1,3 +1,5 @@
+
+
 .therapies-container {
     padding: 40px 20px;
     background-color: rgba(244, 243, 243, 0.955);
@@ -23,8 +25,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 250px; /* Fixed height for the box */
-    min-height: 250px;
+    height: 150px; /* Fixed height for the box */
+    min-height: 150px;
     cursor: pointer;
     transition: all 0.3s ease;
   }
@@ -92,7 +94,7 @@
     align-items: center;      /* Centers the content vertically (if needed) */
     padding: 20px;
     background-color: rgba(244, 243, 243, 0.955);
-  
+
   }
   
   .first-visit-content {

@@ -27,7 +27,6 @@
     border-radius: 8px; /* Optional for rounded corners */
     object-fit: cover; /* Ensures proper aspect ratio */
     margin-top: 10px;
-    /* margin-left: 3%; */
   }
   
   /* Styling for the text */
@@ -82,6 +81,24 @@
   animation: fadeIn 2s ease-out forwards; /* 1s fade-in animation */
 }
 
+@media (max-width: 1150px) {
+  .chiropractic-row {
+    display: grid; /* Use grid layout */
+    grid-template-columns: 1fr; /* Single column layout */
+    text-align: center; /* Center text content */
+    align-items: center; /* Vertically center items */
+    gap: 1rem; /* Add space between the image and text */
+  }
+
+  .responsive-image {
+    justify-self: center; /* Center the image horizontally */
+  }
+
+  .text-content {
+    margin-top: 1rem; /* Add spacing above the text content */
+  }
+ 
+}
 
   
   /* Responsive behavior for smaller screens */
