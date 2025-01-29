@@ -8,6 +8,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Laser from './pages/Laser';
 import Massage from './pages/Massage';
 import Spinal from './pages/Spinal';
+import Shockwave from './pages/Shockwave';
+import Orthotics from './pages/Orthotics';
 
 const App: React.FC = () => {
 
@@ -28,6 +30,8 @@ const App: React.FC = () => {
           <Route path="/laser" element={<Laser />} />
           <Route path="/massage" element={<Massage />} />
           <Route path="/spinal" element={<Spinal />} />
+          <Route path="/shockwave" element={<Shockwave />} />
+          <Route path="/orthotics" element={<Orthotics />} />
         </Routes>
       </div>
     </Router>
