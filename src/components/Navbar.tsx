@@ -67,8 +67,12 @@ const Navbar: React.FC = () => {
                   <ul className="dropdown-menu">
                     <li><Link to="/chiropractic">Chiropractic Care</Link></li>
                     <li><Link to="/laser">Laser Therapy</Link></li>
-                    <li><Link to="/spinal-decompression">Spinal Decompression</Link></li>
-                    <li><Link to="/massage-therapy">Massage Therapy</Link></li>
+                    <li><Link to="/spinal">Spinal Decompression</Link></li>
+                    <li><Link to="/massage">Massage Therapy</Link></li>
+                    <li><Link to="/shockwave">Shockwave Therapy</Link></li>
+                    <li><Link to="/orthotics">Custom Orthotics</Link></li>
+                    <li><Link to="/exercise">Exercise Therapy</Link></li>
+                    <li><Link to="/functional">Functional Medicine</Link></li>
                   </ul>
                 )}
               </li>

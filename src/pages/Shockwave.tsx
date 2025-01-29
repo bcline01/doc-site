@@ -3,6 +3,7 @@ import FirstVisit from '../components/FirstVisit';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import ShockwavePic from '../assets/stemwave1.png';
+// import AccessibilityToolbar from '../components/AccessibilityToolbar';
 
 const Shockwave: React.FC = () => {
   const [loaded, setLoaded] = useState(false);
@@ -17,6 +18,9 @@ const Shockwave: React.FC = () => {
       <div>
         <Navbar />
       </div>
+      {/* <div>
+            <AccessibilityToolbar />
+        </div> */}
       <div className='laser-page'>
     <div className="laser-container">
       <div className={`laser-image ${loaded ? 'fade-in' : ''}`} >

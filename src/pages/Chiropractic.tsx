@@ -5,7 +5,7 @@ import Patient from '../assets/patient.png';
 import '../styles/Chiropractic.css';
 import Navbar from '../components/Navbar';
 import '../styles/Accessibility.css';
-import AccessibilityToolbar from '../components/AccessibilityToolbar';
+// import AccessibilityToolbar from '../components/AccessibilityToolbar';
 import Footer from '../components/Footer';
 import FirstVisit from '../components/FirstVisit';
 import '../styles/FirstVisit.css';
@@ -79,9 +79,9 @@ const Chiropractic: React.FC = () => {
         <div id="top-of-page"></div>
             <Navbar />
         </div>
-        <div>
+        {/* <div>
             <AccessibilityToolbar />
-        </div>
+        </div> */}
         <div className='responsive-container'>
         <div className="chiropractic-main">
     {rows.map((row, index) => (

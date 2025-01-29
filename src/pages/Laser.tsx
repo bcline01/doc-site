@@ -4,19 +4,38 @@ import '../styles/Laser.css';
 import FirstVisit from '../components/FirstVisit';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
+// import AccessibilityToolbar from '../components/AccessibilityToolbar';
+// import { useLocation } from 'react-router-dom';
 
 const Laser: React.FC = () => {
+ 
+  // const location = useLocation();
+
   const [loaded, setLoaded] = useState(false);
   useEffect(() => {
     const timer = setTimeout(() => setLoaded(true), 100); // Add a slight delay to trigger animations
     return () => clearTimeout(timer); // Cleanup timeout
   }, []);
 
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0; // Additional scroll reset
+    }, 50);
+  }, []);
+  
+  
+  
+  
+  
   return (
     <div>
       <div>
         <Navbar />
       </div>
+      {/* <div>
+            <AccessibilityToolbar />
+        </div> */}
       <div className='laser-page'>
     <div className="laser-container">
       <div className={`laser-image ${loaded ? 'fade-in' : ''}`} >
@@ -39,10 +58,11 @@ const Laser: React.FC = () => {
     <div>
       <FirstVisit />
       </div>
-      </div>
       <div>
         <Footer />
       </div>
+      </div>
+     
     </div>
   );
 };
