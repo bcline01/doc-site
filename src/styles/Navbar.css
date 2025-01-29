@@ -6,10 +6,11 @@
   .dropdown-toggle {
     background: none;
     border: none;
-    font-size: 1rem;
+    font-family: 'raleway', sans-serif;
     cursor: pointer;
-    padding: 10px;
-    color: inherit;
+    /* padding: 10px; */
+    color: black;
+    /* font-size: 1.3rem; */
   }
   
   .dropdown-menu {
