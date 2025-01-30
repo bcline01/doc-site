@@ -146,13 +146,14 @@
 }
 
   
-  .home-btn {
+.home-btn {
     font-size: 2rem;
     font-family: "Raleway", sans-serif;
     border-radius: 6px;
     background-color: #55739b;
     color: white;
-
+    cursor: pointer !important;
+    z-index: 10;
   }
 
 

@@ -5,6 +5,7 @@ import Functional from '../assets/functional-medicine.png';
 import Massage from '../assets/masssage.png';
 import Laser from '../assets/laser.png';
 import Decompression from '../assets/spinal.png';
+import Chiro from '../assets/chiroadjustment.png';
 import { To, useNavigate } from 'react-router-dom';
 import React from 'react';
 import '../styles/FirstVisit.css';
@@ -13,6 +14,11 @@ const FirstVisit: React.FC = () => {
   const navigate = useNavigate();
 
   const therapies = [
+    {
+      name: 'Chiropractic',
+      image: Chiro,
+      route: "/chiropractic",
+    },
     {
       name: 'Laser Therapy',
       image: Laser,

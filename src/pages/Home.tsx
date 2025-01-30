@@ -42,7 +42,7 @@ const Home: React.FC = () => {
         <div className="content">
           <div className='welcome'>
             <div> We Welcome New Patients</div>
-          <div className='home-btn-container'>
+          <div >
           <button className='home-btn'>Request a New Appointment</button>
           </div>
           <div className='extra-buttons'>
