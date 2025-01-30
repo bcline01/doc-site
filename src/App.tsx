@@ -12,6 +12,7 @@ import Shockwave from './pages/Shockwave';
 import Orthotics from './pages/Orthotics';
 import Exercise from './pages/Exercise';
 import FunctionalMedicine from './pages/FunctionalMedicine';
+import Form from './pages/Form';
 
 const App: React.FC = () => {
 
@@ -36,6 +37,7 @@ const App: React.FC = () => {
           <Route path="/orthotics" element={<Orthotics />} />
           <Route path="/exercise" element={<Exercise />} />
           <Route path="/functional" element={<FunctionalMedicine />} />
+          <Route path="/new-patient" element={<Form />} />
         </Routes>
       </div>
     </Router>
