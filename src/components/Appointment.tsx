@@ -7,7 +7,7 @@ const Appointment: React.FC = () => {
   const navigate = useNavigate();
   
   const handleAptButton = () => {
-    navigate ('/new-patient');
+    navigate ('/appointment');
   }
   return (
     <div className="appointment">

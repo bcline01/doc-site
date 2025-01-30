@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
   const navigate = useNavigate();
   
   const handleButton = () => {
-    navigate ('/new-patient');
+    navigate ('/appointment');
   }
 
     const handlePhoneClick = () => {
@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
             </li>
 
             <li className="footer-nav-item mx-2">
-              <Link className="footer-nav-link" to="/new-patient">New Patient</Link>
+              <Link className="footer-nav-link" to="/new-patient-form">New Patient Forms</Link>
             </li>
             {/* <li className="footer-nav-item mx-2">
               <a className="footer-nav-link" href="#section3">Services</a>

@@ -18,6 +18,7 @@ const Navbar: React.FC = () => {
   };
 
   const isHomePage = location.pathname === '/';
+  const isNewPatientPage = location.pathname === '/appointment';
 
   return (
     <nav className="nav-bar">
@@ -51,9 +52,11 @@ const Navbar: React.FC = () => {
               <li><a href="#section4">Patient Portal</a></li>
               <li><a href="#section6">Our Docs</a></li>
               <li><a href="#section7">Contact us</a></li>
+              <li><Link to="/new-patient-forms">New Patient Forms</Link></li>
             </>
           ) : (
             <>
+            
               {/* Dropdown for Services */}
               <li className="dropdown">
                 <button
@@ -76,6 +79,7 @@ const Navbar: React.FC = () => {
                   </ul>
                 )}
               </li>
+              <li><Link to="/new-patient-forms">New Patient Forms</Link></li>
 
 
 
@@ -83,7 +87,9 @@ const Navbar: React.FC = () => {
               <li><Link to="/patient-portal">Patient Portal</Link></li>
 
               {/* Book Appointment */}
-              <li><Link to="/new-patient">Request Appointment</Link></li>
+              {!isNewPatientPage && (
+                <li><Link to="/appointment">Request Appointment</Link></li>
+              )}
             </>
           )}
         </ul>

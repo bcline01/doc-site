@@ -20,7 +20,7 @@ const Home: React.FC = () => {
   const navigate = useNavigate();
   
   const handleButton = () => {
-    navigate ('/new-patient');
+    navigate ('/appointment');
   }
 
   // const [menuOpen, setMenuOpen] = useState(false);
