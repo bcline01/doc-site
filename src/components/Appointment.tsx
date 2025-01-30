@@ -1,8 +1,14 @@
 import React from 'react';
 import UFPic from '../assets/UF.png';
 import '../styles/Appointment.css'; 
+import { useNavigate } from 'react-router-dom';
 
 const Appointment: React.FC = () => {
+  const navigate = useNavigate();
+  
+  const handleAptButton = () => {
+    navigate ('/new-patient');
+  }
   return (
     <div className="appointment">
       <div className="image-container">
@@ -10,7 +16,7 @@ const Appointment: React.FC = () => {
         <div className="overlay">
           <h2>Your Health, Our Priority</h2>
           <p>Book your appointment today for personalized care</p>
-          <button className='button'>Request Appointment Now</button>
+          <button className='button' onClick={handleAptButton}>Request Appointment Now</button>
         </div>
       </div>
     </div>

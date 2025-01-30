@@ -11,11 +11,17 @@ import Footer from '../components/Footer';
 import SpinePic from '../assets/spineImg.png';
 import AccessibilityToolbar from '../components/AccessibilityToolbar';
 import Navbar from '../components/Navbar';
+import { useNavigate } from 'react-router-dom';
 
 
 
 
 const Home: React.FC = () => {
+  const navigate = useNavigate();
+  
+  const handleButton = () => {
+    navigate ('/new-patient');
+  }
 
   // const [menuOpen, setMenuOpen] = useState(false);
 
@@ -43,7 +49,7 @@ const Home: React.FC = () => {
           <div className='welcome'>
             <div> We Welcome New Patients</div>
           <div >
-          <button className='home-btn'>Request a New Appointment</button>
+          <button className='home-btn' onClick={handleButton}>Request a New Appointment</button>
           </div>
           <div className='extra-buttons'>
           <button className='extra-button'>Call Us</button>

@@ -4,7 +4,7 @@ import { FaPhoneFlip } from "react-icons/fa6";
 import { FaFax } from "react-icons/fa";
 import { MdOutlineMail } from "react-icons/md";
 import { MdLocationOn } from "react-icons/md";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 
@@ -13,6 +13,11 @@ import { Link } from 'react-router-dom';
 // AIzaSyAOWHZBwPq_u9263KQzV-W-MtfErUHZeeE
 
 const Footer: React.FC = () => {
+  const navigate = useNavigate();
+  
+  const handleButton = () => {
+    navigate ('/new-patient');
+  }
 
     const handlePhoneClick = () => {
         window.location.href = 'tel:+13523724110';
@@ -72,7 +77,7 @@ const Footer: React.FC = () => {
               <p style={{fontSize:'20px'}}>
                 We will do our best to accommodate your busy schedule. Request an appointment today!
               </p>
-              <button className="footer-btn" >Request Appointment!</button>
+              <button className="footer-btn" onClick={handleButton}>Request Appointment!</button>
             </div>
 
                     <div className="col-md-4 mb-3 ">
