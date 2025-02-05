@@ -12,6 +12,7 @@ import SpinePic from '../assets/spineImg.png';
 import AccessibilityToolbar from '../components/AccessibilityToolbar';
 import Navbar from '../components/Navbar';
 import { useNavigate } from 'react-router-dom';
+// import NewPic from '../assets/techspine.png';
 
 
 
@@ -45,8 +46,9 @@ const Home: React.FC = () => {
         <div className='small-picture'>
         <img src={SpinePic} alt="Spine" />
         </div>
+        {/* <img src={NewPic} alt="Spine" className='background-video' /> */}
         <div className="content">
-          <div className='welcome'>
+          <div >
             <div> We Welcome New Patients</div>
           <div >
           <button className='home-btn' onClick={handleButton}>Request a New Appointment</button>

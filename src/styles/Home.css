@@ -16,12 +16,15 @@
 
   .content {
     position: relative;
-    z-index: 1;
-    color: black;
-    font-size: 5rem;
+    z-index: 1000;
+    color: rgb(84, 81, 81);
+    font-size: 2.5rem;
     max-width: 70%;
-   font-family: "Raleway", sans-serif;
-   
+    font-family: 'EB Garamond', serif;
+    font-weight: none;
+   /* font-family: "Raleway", sans-serif; */
+   top: -200px; /* Adjust the value to move up */
+   left: 150px; 
   }
 
 
@@ -31,10 +34,10 @@
     left: 50%;
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     transform: translate(-50%, -50%);
     z-index: -1; 
-    
+    opacity: .9; /*trying something new*/
   }
 
   .nav-bar {
@@ -134,7 +137,7 @@
 .hamburger.active .bar:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
-
+/* 
 .welcome {
   color: black;
   font-weight: 600px;
@@ -143,18 +146,19 @@
   border-radius: 6px;
   padding: 10px;
   font-size: 5rem;
-}
+} */
 
   
 .home-btn {
     font-size: 2rem;
-    font-family: "Raleway", sans-serif;
+    font-family: 'EB Garamond', serif;
     border-radius: 6px;
-    background-color: #55739b;
+    background-color: rgb(140, 138, 138);
     color: white;
     cursor: pointer !important;
     z-index: 1000;
-    
+    text-transform: lowercase;
+    letter-spacing: 2px;
   }
 
 
