@@ -65,7 +65,7 @@ const AccessibilityToolbar: React.FC = () => {
     // Use `useEffect` to apply the font size to specific classes
     useEffect(() => {
       // Apply font size dynamically to specific elements
-      const elements = document.querySelectorAll('.nav-items a, .home-btn, .extra-button, .footer-nav-item, .footer a, .footer-btn, .learn-more-btn, .button');
+      const elements = document.querySelectorAll('.nav-items a, .extra-button, .footer-nav-item, .footer a, .footer-btn, .learn-more-btn, .button');
       elements.forEach((element) => {
         (element as HTMLElement).style.fontSize = `${fontSize}rem`;  
       });

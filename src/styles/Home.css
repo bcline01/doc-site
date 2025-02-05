@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
 
 
-.home-page {
-    position: relative;
+/* .home-page {
+    position: absolute;
     min-height: 100vh;
     overflow: hidden;
     display: flex;
@@ -12,11 +12,22 @@
     text-align: center;
     color: white;
     flex-direction: column;
-  }
+  } */
+.home-page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  flex-direction: column;
+}
 
   .content {
     position: relative;
-    z-index: 1000;
+    z-index: 2;
     color: rgb(84, 81, 81);
     font-size: 2.5rem;
     max-width: 70%;
@@ -38,6 +49,27 @@
     transform: translate(-50%, -50%);
     z-index: -1; 
     opacity: .9; /*trying something new*/
+    pointer-events: auto !important; /* Ignore mouse events */
+  }
+  .home-btn {
+    position: relative;
+    display: inline-block;
+    font-size: 2rem;
+    font-family: 'EB Garamond', serif;
+    border-radius: 6px;
+    background-color: rgb(140, 138, 138);
+    color: white;
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    z-index: 9999;
+    text-transform: lowercase;
+    letter-spacing: 2px;
+  }
+
+
+  .home-btn:hover {
+    background-color: rgb(31, 31, 31);
+  color: white;
   }
 
   .nav-bar {
@@ -149,23 +181,7 @@
 } */
 
   
-.home-btn {
-    font-size: 2rem;
-    font-family: 'EB Garamond', serif;
-    border-radius: 6px;
-    background-color: rgb(140, 138, 138);
-    color: white;
-    cursor: pointer !important;
-    z-index: 1000;
-    text-transform: lowercase;
-    letter-spacing: 2px;
-  }
 
-
-  .home-btn:hover {
-    background-color: rgb(31, 31, 31);
-  color: white;
-  }
 
 .extra-buttons {
   display: none;
