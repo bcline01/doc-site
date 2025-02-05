@@ -6,12 +6,10 @@ import React from 'react';
 
 
 const HeroSection: React.FC = () => {
-    console.log("HeroSection rendered"); // Add this to verify
 
     const navigate = useNavigate();
 
     const handleButton = () => {
-      alert("Button clicked!");
       navigate('/appointment');
     };
       
