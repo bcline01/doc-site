@@ -29,7 +29,7 @@
     position: relative;
     z-index: 2;
     color: rgb(84, 81, 81);
-    font-size: 2.5rem;
+    font-size: 3rem;
     max-width: 70%;
     font-family: 'EB Garamond', serif;
     font-weight: none;
@@ -57,7 +57,7 @@
     font-size: 1.5rem;
     font-family: 'EB Garamond', serif;
     border-radius: 6px;
-    background-color: rgb(140, 138, 138);
+    background-color: rgb(161 157 157);
     color: white;
     cursor: pointer !important;
     pointer-events: auto !important;
@@ -287,31 +287,70 @@
     font-size: 1.5rem;
   }
   .extra-button {
-    width: 100%;
+    position: relative;
+    display: inline-block;
+    font-size: 1.5rem;
+    font-family: 'EB Garamond', serif;
     border-radius: 6px;
-    background-color: #55739b;
+    background-color: rgb(161 157 157);
     color: white;
-
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    z-index: 9999;
+    text-transform: lowercase;
+    letter-spacing: 2px;
+    width: 100%;
   }
   .extra-button:hover {
     background-color: rgb(31, 31, 31);
 color: white;
   }
   .home-btn {
-    font-size: 1.75rem;
-    margin-top: 10px;
-    width: 100%;
+    position: relative;
+    display: inline-block;
+    font-size: 1.5rem;
+    font-family: 'EB Garamond', serif;
     border-radius: 6px;
-    background-color: #55739b;
+    background-color: rgb(161 157 157);
     color: white;
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    z-index: 9999;
+    text-transform: lowercase;
+    letter-spacing: 2px;
 
+  }
+  .content {
+    position: relative;
+    z-index: 2;
+    color: rgb(84, 81, 81);
+    font-size: 3rem;
+    max-width: 70%;
+    font-family: 'EB Garamond', serif;
+    font-weight: none;
+   /* font-family: "Raleway", sans-serif; */
+   top: 0; /* Adjust the value to move up */
+   left: 0; 
   }
   }
   
 
 
 
-  @media (min-width: 391px) and (max-width: 852px) {
+  @media (min-width: 391px) and (max-width: 1024px) {
+
+  .content {
+    position: relative;
+    z-index: 2;
+    color: rgb(84, 81, 81);
+    font-size: 3rem;
+    max-width: 70%;
+    font-family: 'EB Garamond', serif;
+    font-weight: none;
+   /* font-family: "Raleway", sans-serif; */
+   top: 0; /* Adjust the value to move up */
+   left: 0; 
+  }
    .background-video {
      display: none;
    }  
@@ -402,23 +441,37 @@ color: white;
       font-size: 1.5rem;
     }
     .extra-button {
-      width: 100%;
+      position: relative;
+      display: inline-block;
+      font-size: 1.5rem;
+      font-family: 'EB Garamond', serif;
       border-radius: 6px;
-      background-color: #55739b;
+      background-color: rgb(140, 138, 138);
       color: white;
-
+      cursor: pointer !important;
+      pointer-events: auto !important;
+      z-index: 9999;
+      text-transform: lowercase;
+      letter-spacing: 2px;
+      width: 100%;
     }
     .extra-button:hover {
       background-color: rgb(31, 31, 31);
   color: white;
     }
     .home-btn {
-      font-size: 1.75rem;
-      margin-top: 10px;
-      width: 100%;
+      position: relative;
+      display: inline-block;
+      font-size: 1.5rem;
+      font-family: 'EB Garamond', serif;
       border-radius: 6px;
-      background-color: #55739b;
+      background-color: rgb(140, 138, 138);
       color: white;
+      cursor: pointer !important;
+      pointer-events: auto !important;
+      z-index: 9999;
+      text-transform: lowercase;
+      letter-spacing: 2px;
 
     }
     .small-picture {
