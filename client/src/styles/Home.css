@@ -64,6 +64,8 @@
     z-index: 9999;
     text-transform: lowercase;
     letter-spacing: 2px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
 

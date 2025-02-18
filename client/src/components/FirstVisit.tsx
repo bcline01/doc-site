@@ -93,7 +93,15 @@ const FirstVisit: React.FC = () => {
                   handleServiceButton(therapy.route);
                 }}
               />
-              <h3>{therapy.name}</h3>
+              <h3
+                onClick={() => {
+                  console.log(`Navigating to ${therapy.route}`);
+                  handleServiceButton(therapy.route);
+                }}
+                style={{ cursor: "pointer" }} // Optional: Makes it clear it's clickable
+              >
+                {therapy.name}
+              </h3>
             </div>
           ))}
         </div>
