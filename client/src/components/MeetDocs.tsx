@@ -6,6 +6,7 @@ import '../styles/MeetDocs.css';
 import Man1 from '../assets/man1.png';
 import Man2 from '../assets/man2.png';
 import Man3 from '../assets/man3.png';
+import Man4 from '../assets/doc-4.png';
 
 
 // Options for the OwlCarousel
@@ -76,7 +77,7 @@ const MeetDocs: React.FC = () => {
           />
         </div>
         <div className="col-md-6 doc-text">
-          <p>Doctor 1 description goes here. It can be detailed text describing the doctor’s qualifications, experience, etc.</p>
+          <p>Dr. Matthew Cline</p>
         </div>
       </div>
     </div>
@@ -90,7 +91,7 @@ const MeetDocs: React.FC = () => {
           />
         </div>
         <div className="col-md-6 doc-text">
-          <p>Doctor 1 description goes here. It can be detailed text describing the doctor’s qualifications, experience, etc.</p>
+          <p>Dr. Matthew Richeson</p>
         </div>
       </div>
     </div>
@@ -104,7 +105,21 @@ const MeetDocs: React.FC = () => {
           />
         </div>
         <div className="col-md-6 doc-text">
-          <p>Doctor 1 description goes here. It can be detailed text describing the doctor’s qualifications, experience, etc.</p>
+          <p>Dr. Cooper Cline</p>
+        </div>
+      </div>
+    </div>
+    <div className="carousel-item">
+      <div className="row align-items-center">
+        <div className="col-md-6 image-pair">
+          <img 
+            src={Man4} 
+            alt="Man 4" 
+            className="img-fluid rounded-circle" 
+          />
+        </div>
+        <div className="col-md-6 doc-text">
+          <p>Dr. Kent Owens</p>
         </div>
       </div>
     </div>

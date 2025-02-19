@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 
 const Form: React.FC = () => {
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+  
+  
   return (
+    
+    <div>
+      
     <div>
       <Navbar />
       <div
@@ -32,6 +41,7 @@ const Form: React.FC = () => {
           Loading…
         </iframe>
       </div>
+    </div>
     </div>
   );
 };

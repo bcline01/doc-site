@@ -86,7 +86,7 @@ const AccessibilityToolbar: React.FC = () => {
 
     useEffect(() => {
       // Apply font size dynamically to specific elements
-      const elements = document.querySelectorAll('.vision-section p, .doc-text p');
+      const elements = document.querySelectorAll('.vision-section p');
       elements.forEach((element) => {
         (element as HTMLElement).style.fontSize = `${fontSizeP}rem`;  
       });
