@@ -77,7 +77,7 @@ const MeetDocs: React.FC = () => {
           />
         </div>
         <div className="col-md-6 doc-text">
-          <p>Dr. Matthew Cline</p>
+          <p>Dr. Matthew Richeson</p>
         </div>
       </div>
     </div>
@@ -91,7 +91,7 @@ const MeetDocs: React.FC = () => {
           />
         </div>
         <div className="col-md-6 doc-text">
-          <p>Dr. Matthew Richeson</p>
+          <p>Dr. Matthew Cline</p>
         </div>
       </div>
     </div>

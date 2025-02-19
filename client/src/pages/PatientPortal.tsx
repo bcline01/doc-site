@@ -1,5 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
+import "../styles/PatientPortal.css"
+import Navbar from "../components/Navbar";
 
 const PatientPortal = () => {
   const [isLogin, setIsLogin] = useState(true); // Toggles between Login and Signup
@@ -28,20 +30,45 @@ const PatientPortal = () => {
 
   return (
     <div>
-      <h2>{isLogin ? "Login" : "Sign Up"}</h2>
-      <form onSubmit={handleSubmit}>
-        {!isLogin && (
-          <input type="text" placeholder="Username" value={name} onChange={(e) => setName(e.target.value)} required />
-        )}
-        <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-        <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-        <button type="submit">{isLogin ? "Login" : "Sign Up"}</button>
-      </form>
-      <button onClick={() => setIsLogin(!isLogin)}>
-        {isLogin ? "Need an account? Sign up" : "Already have an account? Log in"}
-      </button>
+       <div>
+        <Navbar />
+      </div>
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>{isLogin ? "Login" : "Sign Up"}</h2>
+        <form onSubmit={handleSubmit}>
+          {!isLogin && (
+            <input
+              type="text"
+              placeholder="Username"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+            />
+          )}
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit">{isLogin ? "Login" : "Sign Up"}</button>
+        </form>
+        <button className="switch-btn" onClick={() => setIsLogin(!isLogin)}>
+          {isLogin ? "Need an account? Sign up" : "Already have an account? Log in"}
+        </button>
+      </div>
+    </div>
     </div>
   );
-};
+}
 
 export default PatientPortal;
