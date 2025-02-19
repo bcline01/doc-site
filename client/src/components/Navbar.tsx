@@ -49,7 +49,7 @@ const Navbar: React.FC = () => {
             <>
               <li><a href="#section2">Testimonials</a></li>
               <li><a href="#section3">Services</a></li>
-              <li><a href="#section4">Patient Portal</a></li>
+              <li><Link to="/auth-form">Patient Portal</Link></li>
               <li><a href="#section6">Our Docs</a></li>
               <li><a href="#section7">Contact us</a></li>
               <li><Link to="/new-patient-forms">New Patient Forms</Link></li>
@@ -85,7 +85,7 @@ const Navbar: React.FC = () => {
 
 
               {/* Patient Portal */}
-              <li><Link to="/patient-portal">Patient Portal</Link></li>
+              <li><Link to="/auth-form">Patient Portal</Link></li>
 
               {/* Book Appointment */}
               {!isNewPatientPage && (
