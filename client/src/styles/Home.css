@@ -304,6 +304,8 @@
     text-transform: lowercase;
     letter-spacing: 2px;
     width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .extra-button:hover {
     background-color: rgb(31, 31, 31);
@@ -459,6 +461,8 @@ color: white;
       text-transform: lowercase;
       letter-spacing: 2px;
       width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
     }
     .extra-button:hover {
       background-color: rgb(31, 31, 31);
