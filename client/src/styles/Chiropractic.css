@@ -32,7 +32,8 @@
   /* Styling for the text */
   .text-content {
     font-size: 1.2rem;
-    font-family: 'raleway', sans-serif;
+    /* font-family: 'raleway', sans-serif; */
+    font-family: 'EB Garamond', serif;
     line-height: 1.5;
     letter-spacing: 2px;
     text-align: left;
@@ -58,8 +59,8 @@
   margin-bottom: 0.5rem;
 }
 .italic {
-  font-style: italic;
-  color: #085bc7; /* muted orange for softer emphasis */
+  
+  color: #085bc7; 
   font-weight: 500;
   font-size: 1.4rem;
 }

@@ -18,9 +18,6 @@ const Massage: React.FC = () => {
       <div>
         <Navbar />
       </div>
-      {/* <div>
-            <AccessibilityToolbar />
-        </div> */}
       <div className='laser-page'>
     <div className="laser-container">
       <div className={`laser-image ${loaded ? 'fade-in' : ''}`} >

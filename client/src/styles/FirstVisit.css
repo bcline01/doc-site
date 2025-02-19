@@ -41,7 +41,8 @@
     left: 50%;
     transform: translate(-50%, -50%); /* Center the name inside the container */
     font-size: 1.2rem;
-    font-family: 'raleway', sans-serif;
+    /* font-family: 'raleway', sans-serif; */
+    font-family: 'EB Garamond', serif;
     color: white;
     background-color: rgba(0, 0, 0, 0.6); /* Background for visibility */
     padding: 10px;
@@ -100,12 +101,14 @@
   .first-visit-content {
     text-align: center;       /* Centers the text inside */
     width: 100%;              /* Ensures the content stretches to available width */
-    font-family: 'raleway', sans-serif;
+    /* font-family: 'raleway', sans-serif; */
+    font-family: 'EB Garamond', serif;
   }
   
   .first-visit-content h1 {
     margin-bottom: 20px;      /* Adds space between the h1 and the list */
-    font-family: 'raleway', sans-serif;
+    /* font-family: 'raleway', sans-serif; */
+    font-family: 'EB Garamond', serif;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: none;

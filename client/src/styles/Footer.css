@@ -53,7 +53,8 @@
   /* Footer links */
   .footer a {
     text-decoration: none;
-    font-family: 'Raleway', sans-serif;
+    /* font-family: 'Raleway', sans-serif; */
+    font-family: 'EB Garamond', serif;
     font-size: 1.25rem;
     font-weight: 300;
     color: #333; /* Adjust text color */
@@ -109,7 +110,8 @@
   transition: background-color 0.3s ease;
   border-radius: 3px;
   border-color: #55739b;
-  font-family: 'raleway', sans-serif;
+  /* font-family: 'raleway', sans-serif; */
+  font-family: 'EB Garamond', serif;
   letter-spacing: 2px;
 }
 

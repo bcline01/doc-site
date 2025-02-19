@@ -6,7 +6,8 @@
   .dropdown-toggle {
     background: none;
     border: none;
-    font-family: 'raleway', sans-serif;
+    /* font-family: 'raleway', sans-serif; */
+    font-family: 'EB Garamond', serif;
     cursor: pointer;
     /* padding: 10px; */
     color: black;

@@ -69,8 +69,8 @@ const FirstVisit: React.FC = () => {
       <div className="therapies-container">
         <div
           style={{
-            fontFamily: 'raleway',
-            textTransform: 'uppercase',
+            fontFamily: 'EB Garamond',
+           textTransform: 'uppercase',
             fontSize: '3rem',
             letterSpacing: '2px',
             marginBottom: '15px',
@@ -78,7 +78,7 @@ const FirstVisit: React.FC = () => {
         >
           Our Therapies
         </div>
-        <p style={{ fontFamily: 'raleway', fontSize: '1rem' }}>
+        <p style={{ fontFamily: 'EB Garamond', fontSize: '1rem' }}>
           *A combination of therapies are used based on your personal need and plan of care*
         </p>
         <div className="therapies-grid">
@@ -112,7 +112,7 @@ const FirstVisit: React.FC = () => {
         <div className="first-visit-content">
           <div
             style={{
-              fontFamily: 'raleway',
+              fontFamily: 'EB Garamond',
               textTransform: 'uppercase',
               fontSize: '3rem',
               letterSpacing: '2px',

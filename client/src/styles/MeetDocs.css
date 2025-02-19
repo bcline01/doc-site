@@ -39,7 +39,8 @@
   line-height: 1.6;
   color: #333;
   margin: 0;
-  font-family: 'raleway', sans-serif;
+  /* font-family: 'raleway', sans-serif; */
+  font-family: 'EB Garamond', serif;
 }
 
 
@@ -96,7 +97,8 @@
   transform: translateX(-50%);   /* Centers the text horizontally */
   z-index: 10;                   /* Ensure text appears above carousel */
   padding: 0 10px;               /* Prevents text from touching the edges */
-  font-family: 'Raleway', sans-serif; /* Use Raleway font */
+  /* font-family: 'Raleway', sans-serif;  */
+  font-family: 'EB Garamond', serif;
   letter-spacing: 2px;           /* Add space between letters */
   text-transform: uppercase;     /* Make text uppercase */
 }

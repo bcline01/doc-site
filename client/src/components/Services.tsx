@@ -36,7 +36,7 @@ const Services: React.FC = () => {
         {services.map((service) => (
           <div key={service.id} className="service-card">
             <img src={service.image} alt={service.title} className="service-image" />
-            <h3 style={{fontFamily:'Raleway'}}>{service.title}</h3>
+            <h3 style={{fontFamily:'EB Garamond'}}>{service.title}</h3>
              
             <button className="learn-more-btn" onClick={() => handleLearnMore(service.route)}>Learn More</button>
           </div>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Baby from '../assets/baby.png';
-import Pregnant from '../assets/pregnant.png';
+// import Baby from '../assets/baby.png';
+// import Pregnant from '../assets/pregnant.png';
 import Patient from '../assets/patient.png';
 import '../styles/Chiropractic.css';
 import Navbar from '../components/Navbar';
@@ -9,6 +9,8 @@ import '../styles/Accessibility.css';
 import Footer from '../components/Footer';
 import FirstVisit from '../components/FirstVisit';
 import '../styles/FirstVisit.css';
+import Car from '../assets/car-accident.png';
+import Family from '../assets/family-pic.png';
 
 
 
@@ -36,34 +38,43 @@ const Chiropractic: React.FC = () => {
         </>,
       ],
     },
+    
+      {
+        image: Car,
+        title: 'Car Accident Injuries',
+        description: 'Chiropractic care after a car accident helps restore alignment, reduce pain, and support the body’s natural healing process.',
+        points: [
+          <>
+            Helps relieve common issues such as{' '}
+            <span className="italic">whiplash, neck pain, and headaches</span>.
+          </>,
+          'Reduces inflammation and promotes faster recovery.',
+          'Restores mobility and helps prevent long-term complications.',
+          <>
+            Learn more about how chiropractic care can aid in your recovery{' '}
+            <a href="/car-accident-recovery">here</a>.
+          </>,
+        ],
+      },
+      
     {
-      image: Baby,
-      title: 'Chiropractic Care for Babies',
-      description: 'Chiropractic care for babies focuses on gently addressing misalignments in their delicate spines that can occur during birth or early development.',
+      image: Family,
+      title: 'Chiropractic Care for Families',
+      description: 'Chiropractic care supports the health and well-being of every family member, from newborns to adults, by promoting alignment and overall wellness.',
       points: [
         <>
-          Helps alleviate common issues such as{' '}
-          <span className="italic">gas, colic, and frequent spitting up</span>.
+          Helps babies with{' '}
+          <span className="italic">colic, gas pain, and digestive discomfort</span> by improving nervous system function.
         </>,
-        'Promotes restful sleep, essential for growth and development.',
-        'Supports your baby’s nervous system for physical and emotional health.',
-      ],
-    },
-    {
-      image: Pregnant,
-      title: 'Chiropractic Care During Pregnancy',
-      description: 'Pregnancy brings incredible changes to the body, and chiropractic care can provide much-needed relief during this transformative time.',
-      points: [
-        'Alleviates back pain and reduces pressure on the hips.',
         <>
-        Addresses issues like{' '}
-        <span className='italic'>indigestion, headaches, and difficulty sleeping.</span>
+          Supports pregnant women by{' '}
+          <span className="italic">reducing back pain, improving pelvic alignment, and easing discomfort during breastfeeding</span>.
         </>,
-        'Supports smoother labor and delivery through optimized pelvic alignment.',
+        'Provides natural pain relief for adults, children, and babies by reducing tension, improving mobility, and enhancing overall spinal health.',
       ],
-    },
-
-  ];
+    
+    }
+  ];    
  
   
   useEffect(() => {
@@ -79,9 +90,7 @@ const Chiropractic: React.FC = () => {
         <div id="top-of-page"></div>
             <Navbar />
         </div>
-        {/* <div>
-            <AccessibilityToolbar />
-        </div> */}
+       
         <div className='responsive-container'>
         <div className="chiropractic-main">
     {rows.map((row, index) => (

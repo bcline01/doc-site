@@ -14,6 +14,7 @@ import Exercise from './pages/Exercise';
 import FunctionalMedicine from './pages/FunctionalMedicine';
 import Form from './pages/Form';
 import PatientPortal from './pages/PatientPortal';
+import CarAccidentRecovery from './pages/Car-Accident';
 
 const App: React.FC = () => {
 
@@ -40,6 +41,7 @@ const App: React.FC = () => {
           <Route path="/functional" element={<FunctionalMedicine />} />
           <Route path="/appointment" element={<Form />} />
           <Route path="/patient-portal" element={<PatientPortal />} />
+          <Route path="/car-accident-recovery" element={<CarAccidentRecovery />} />
         </Routes>
       </div>
     </Router>
