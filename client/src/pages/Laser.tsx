@@ -18,11 +18,10 @@ const Laser: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-      document.documentElement.scrollTop = 0; // Additional scroll reset
-    }, 50);
+    document.getElementById("top-of-page")?.scrollIntoView({ behavior: "smooth" });
   }, []);
+  
+  
   
   
   
@@ -30,6 +29,8 @@ const Laser: React.FC = () => {
   
   return (
     <div>
+      <div id="top-of-page"></div>
+
       <div>
         <Navbar />
       </div>

@@ -82,6 +82,10 @@ const Chiropractic: React.FC = () => {
     return () => clearTimeout(timer); 
   }, []);
 
+  useEffect(() => {
+    document.getElementById("top-of-page")?.scrollIntoView({ behavior: "smooth" });
+  }, []);
+
  
     
       return (

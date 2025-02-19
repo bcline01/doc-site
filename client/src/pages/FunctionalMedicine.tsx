@@ -11,9 +11,13 @@ const FunctionalMedicine: React.FC = () => {
     return () => clearTimeout(timer); // Cleanup timeout
   }, []);
 
+  useEffect(() => {
+    document.getElementById("top-of-page")?.scrollIntoView({ behavior: "smooth" });
+  }, []);
 
   return (
     <div>
+      <div id="top-of-page"></div>
       <div>
         <Navbar />
       </div>
