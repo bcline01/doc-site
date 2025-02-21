@@ -1,6 +1,6 @@
 # doc-site
 
-![Doc-Site Preview](./src/assets/doc2-copy.png)
+![Doc-Site Preview](../doc-site/client/src/assets/doc2-copy.png)
 
 ## Description
 
@@ -34,7 +34,7 @@ Follow these steps to clone and run the project locally:
 3. Install the dependencies:
    ```bash
    npm install
-4. Start application:
+4. Start application by going to the client folder and opening up a terminal:
    ```bash
    npm run dev
 
